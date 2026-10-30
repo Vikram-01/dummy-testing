@@ -51,6 +51,8 @@ npm run typecheck
 npm run verify:live      # full sync against the real sources (needs internet)
 ```
 
+If `npm install` fails while building `better-sqlite3` (a test-only dependency that compiles native code), run `npm ci --ignore-scripts` instead; it ships prebuilt binaries for Windows, macOS and Linux that load without compiling.
+
 ### Build the installable APK
 
 Cloud build (no Android SDK needed):
