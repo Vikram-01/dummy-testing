@@ -1,0 +1,76 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [vigil]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vigil-apk
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    env:
+      CI: '1'
+      EXPO_NO_TELEMETRY: '1'
+      GRADLE_OPTS: -Dorg.gradle.jvmargs="-Xmx6g -XX:MaxMetaspaceSize=1g" -Dorg.gradle.daemon=false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck, lint and test
+        run: |
+          npx tsc --noEmit
+          npx eslint src tests scripts
+          npx jest
+
+      - name: Generate native Android project
+        run: npx expo prebuild --platform android --no-install
+
+      - name: Build release APK
+        working-directory: android
+        run: ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a --stacktrace
+
+      - name: Collect APK
+        run: |
+          APK=$(ls android/app/build/outputs/apk/release/*.apk | head -1)
+          cp "$APK" vigil-1.0.0.apk
+          ls -la vigil-1.0.0.apk
+          sha256sum vigil-1.0.0.apk | tee vigil-1.0.0.apk.sha256
+
+      - name: Publish release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="vigil-v1.0.0-build${{ github.run_number }}"
+          gh release create "$TAG" vigil-1.0.0.apk vigil-1.0.0.apk.sha256 \
+            --target "${{ github.sha }}" --prerelease \
+            --title "Vigil 1.0.0 (build ${{ github.run_number }})" \
+            --notes "Android APK built from the vigil branch. Signed with the standard debug key for personal installs."
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vigil-apk
+          path: vigil-1.0.0.apk
+          if-no-files-found: ignore
