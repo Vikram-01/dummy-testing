@@ -6,7 +6,7 @@ PKG=com.vigil.securityintel
 mkdir -p ci-logs
 adb wait-for-device
 adb shell settings put global window_animation_scale 0
-adb install -r -g vigil-1.0.0.apk > ci-logs/install.txt 2>&1
+adb install -r -g vigil-1.0.1.apk > ci-logs/install.txt 2>&1
 cat ci-logs/install.txt
 adb logcat -c
 adb shell monkey -p "$PKG" -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1

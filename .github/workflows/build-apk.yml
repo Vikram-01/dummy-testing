@@ -49,14 +49,14 @@ jobs:
         run: ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a,x86_64 --stacktrace
       - name: Collect APK
         run: |
-          cp "$(ls android/app/build/outputs/apk/release/*.apk | head -1)" vigil-1.0.0.apk
-          sha256sum vigil-1.0.0.apk | tee vigil-1.0.0.apk.sha256
+          cp "$(ls android/app/build/outputs/apk/release/*.apk | head -1)" vigil-1.0.1.apk
+          sha256sum vigil-1.0.1.apk | tee vigil-1.0.1.apk.sha256
       - uses: actions/upload-artifact@v5
         with:
           name: vigil-apk
           path: |
-            vigil-1.0.0.apk
-            vigil-1.0.0.apk.sha256
+            vigil-1.0.1.apk
+            vigil-1.0.1.apk.sha256
 
   smoke-test:
     needs: build
@@ -95,7 +95,8 @@ jobs:
           git commit -m "CI smoke-test logs for run ${{ github.run_id }}"
           git push -f origin HEAD:refs/heads/vigil-ci-logs
       - name: Fail if the app crashed
-        run: grep -q PASS ci-logs/RESULT
+        # ci-logs/ is removed while publishing logs, so check the saved copy.
+        run: grep -q PASS /tmp/logs/RESULT
 
   release:
     needs: smoke-test
@@ -109,7 +110,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="vigil-v1.0.1-build${{ github.run_number }}"
-          gh release create "$TAG" vigil-1.0.0.apk vigil-1.0.0.apk.sha256 \
+          gh release create "$TAG" vigil-1.0.1.apk vigil-1.0.1.apk.sha256 \
             --repo "${{ github.repository }}" --target "${{ github.sha }}" --prerelease \
             --title "Vigil 1.0.1 (build ${{ github.run_number }})" \
             --notes "Android APK that passed an emulator launch test. Signed with the standard debug key for personal installs."
