@@ -1,0 +1,245 @@
+10-31 03:09:32.287 W/earchbox:search( 1756): Long monitor contention with owner UserFacingBlocking0 (2749) at java.lang.Object com.google.android.apps.gsa.staticplugins.dx.b.v.call()(PG:1) waiters=0 in android.database.sqlite.SQLiteDatabase com.google.android.apps.gsa.staticplugins.dx.b.ad.a() for 128ms
+10-31 03:09:32.397 D/AndroidRuntime( 3165): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-31 03:09:32.404 I/AndroidRuntime( 3165): Using default boot image
+10-31 03:09:32.404 I/AndroidRuntime( 3165): Leaving lock profiling enabled
+10-31 03:09:32.548 W/libc    ( 3165): Access denied finding property "ro.product.name_for_attestation"
+10-31 03:09:32.548 W/libc    ( 3165): Access denied finding property "ro.product.brand_for_attestation"
+10-31 03:09:32.549 W/libc    ( 3165): Access denied finding property "ro.product.model_for_attestation"
+10-31 03:09:32.550 D/AndroidRuntime( 3165): Calling main entry com.android.commands.monkey.Monkey
+10-31 03:09:32.559 W/Monkey  ( 3165): args: [-p, com.vigil.securityintel, -c, android.intent.category.LAUNCHER, 1]
+10-31 03:09:32.560 W/Monkey  ( 3165):  arg: "com.vigil.securityintel"
+10-31 03:09:32.560 W/Monkey  ( 3165): data="com.vigil.securityintel"
+10-31 03:09:32.681 I/SdkSandboxManager(  520): No SDKs used. Skipping SDK data reconcilation for CallingInfo{mUid=10192, mPackageName='com.vigil.securityintel, mAppProcessToken='null'}
+10-31 03:09:32.738 V/WindowManagerShell(  828): Transition requested: android.os.BinderProxy@e093759 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=8 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.vigil.securityintel/.MainActivity } baseActivity=ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity} topActivity=ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity} origActivity=null realActivity=ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity} numActivities=1 lastActiveTime=32743 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@9fdf1e} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{94153ff com.vigil.securityintel.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+10-31 03:09:32.751 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=0
+10-31 03:09:32.780 D/CoreBackPreview(  520): Window{20aa107 u0 Splash Screen com.vigil.securityintel}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@e8acd1e, mPriority=0, mIsAnimationCallback=false}
+10-31 03:09:32.810 I/AndroidRuntime( 3165): VM exiting with result code 0.
+10-31 03:09:32.994 V/WindowManager(  520): Sent Transition #6 createdAt=10-31 03:09:32.725 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=8 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.vigil.securityintel/.MainActivity } baseActivity=ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity} topActivity=ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity} origActivity=null realActivity=ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity} numActivities=1 lastActiveTime=32743 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{1d50efa Task{4d68417 #8 type=standard A=10192:com.vigil.securityintel}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{1a3bcab com.vigil.securityintel.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false topActivityLetterboxed= false isFromDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null }
+10-31 03:09:32.994 V/WindowManager(  520):     info={id=6 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{1d50efa Task{4d68417 #8 type=standard A=10192:com.vigil.securityintel}}} m=OPEN f=NONE leash=Surface(name=Task=8)/@0x5fac1ee sb=Rect(0, 0 - 320, 640) eb=Rect(0, 0 - 320, 640) d=0},{WCT{RemoteToken{d759f08 Task{a33e632 #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x9a63d0a sb=Rect(0, 0 - 320, 640) eb=Rect(0, 0 - 320, 640) d=0}]}
+10-31 03:09:33.387 I/ActivityManager(  520): Start proc 3262:com.vigil.securityintel/u0a192 for next-top-activity {com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:09:33.712 D/nativeloader( 3262): Configuring clns-6 for other apk /data/app/~~e6B6DBhsbneEuxwVAQPBZw==/com.vigil.securityintel-j9ZeFtzu93PuyciBLnEUjQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~e6B6DBhsbneEuxwVAQPBZw==/com.vigil.securityintel-j9ZeFtzu93PuyciBLnEUjQ==/lib/x86_64:/data/app/~~e6B6DBhsbneEuxwVAQPBZw==/com.vigil.securityintel-j9ZeFtzu93PuyciBLnEUjQ==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.vigil.securityintel
+10-31 03:09:33.773 V/GraphicsEnvironment( 3262): ANGLE GameManagerService for com.vigil.securityintel: false
+10-31 03:09:33.773 V/GraphicsEnvironment( 3262): com.vigil.securityintel is not listed in per-application setting
+10-31 03:09:33.863 W/SoLoader( 3262): Recording new base apk path: /data/app/~~e6B6DBhsbneEuxwVAQPBZw==/com.vigil.securityintel-j9ZeFtzu93PuyciBLnEUjQ==/base.apk
+10-31 03:09:33.864 I/SoLoader( 3262): Preparing SO source: DirectApkSoSource[root = [/data/app/~~e6B6DBhsbneEuxwVAQPBZw==/com.vigil.securityintel-j9ZeFtzu93PuyciBLnEUjQ==/base.apk!/lib/x86_64]]
+10-31 03:09:33.867 I/SoLoader( 3262): Preparing SO source: ApplicationSoSource[DirectorySoSource[root = /data/app/~~e6B6DBhsbneEuxwVAQPBZw==/com.vigil.securityintel-j9ZeFtzu93PuyciBLnEUjQ==/lib/x86_64 flags = 0]]
+10-31 03:09:33.872 W/SQLiteLog( 1437): (28) double-quoted string literal: "1793243373871"
+10-31 03:09:33.872 W/SQLiteLog( 1437): (28) double-quoted string literal: "1"
+10-31 03:09:33.911 I/SafetyLabelChangedBroadcastReceiver(  829): received broadcast packageName: com.vigil.securityintel, current user: UserHandle{0}, packageChangeEvent: NEW_INSTALL, intent user: UserHandle{0}
+10-31 03:09:34.067 W/ogle.android.gm( 2515): Long monitor contention with owner AsyncTask #2 (3134) at android.database.sqlite.SQLiteDatabase com.android.email.provider.EmailProvider.g(android.content.Context)(PG:42) waiters=0 in android.database.sqlite.SQLiteDatabase com.android.email.provider.EmailProvider.g(android.content.Context) for 1.543s
+10-31 03:09:34.314 D/CarrierSvcBindHelper( 1042): onPackageAdded: com.vigil.securityintel
+10-31 03:09:34.341 D/ImsResolver( 1042): maybeAddedImsService, packageName: com.vigil.securityintel
+10-31 03:09:34.342 D/CarrierSvcBindHelper( 1042): onPackageModified: com.vigil.securityintel
+10-31 03:09:34.345 D/ImsResolver( 1042): maybeAddedImsService, packageName: com.vigil.securityintel
+10-31 03:09:34.418 I/SQLiteCastDBHelper( 1398): Creating cast database
+10-31 03:09:34.505 I/SQLiteCastStore( 1398): 0 CastNetworkInfo instances loaded, 0 CastDeviceInfo instances loaded, 0 paired guest mode devices loaded.
+10-31 03:09:34.566 D/CoreBackPreview(  520): Window{d0a49de u0 com.vigil.securityintel/com.vigil.securityintel.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@8006fb7, mPriority=0, mIsAnimationCallback=false}
+10-31 03:09:34.668 I/ExpoModulesCore( 3262): ✅ AppContext was initialized
+10-31 03:09:34.750 I/ExpoModulesCore( 3262): ✅ JSI interop was installed
+10-31 03:09:34.754 I/ExpoModulesCore( 3262): ✅ Expo Modules v2 installed 2 module(s) on globalThis.expo.modules
+10-31 03:09:34.760 D/ConnectivityService(  520): requestNetwork for uid/pid:10192/3262 activeRequest: null callbackRequest: 86 [NetworkRequest [ REQUEST id=87, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.vigil.securityintel UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-31 03:09:34.761 I/ExpoModulesCore( 3262): ✅ Constants were exported
+10-31 03:09:34.764 D/WifiNetworkFactory(  520): got request NetworkRequest [ REQUEST id=87, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.vigil.securityintel UnderlyingNetworks: Null] ]
+10-31 03:09:34.764 D/UntrustedWifiNetworkFactory(  520): got request NetworkRequest [ REQUEST id=87, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.vigil.securityintel UnderlyingNetworks: Null] ]
+10-31 03:09:34.764 D/OemPaidWifiNetworkFactory(  520): got request NetworkRequest [ REQUEST id=87, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.vigil.securityintel UnderlyingNetworks: Null] ]
+10-31 03:09:34.766 D/MultiInternetWifiNetworkFactory(  520): got request NetworkRequest [ REQUEST id=87, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.vigil.securityintel UnderlyingNetworks: Null] ]
+10-31 03:09:34.781 W/unknown:ViewManagerPropertyUpdater( 3262): Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
+10-31 03:09:34.948 I/ReactNativeJS( 3262): Running "main"
+10-31 03:09:34.959 W/ExpoModulesV2( 3262): expo.modules.sqlite.SQLAction does not implement io.github.expo.modules.v2.Enumerable. It crosses to JavaScript here, but R8 keeps an enum's entries and its property only when it does, so a release build may fail on it or send its entry names instead
+10-31 03:09:35.090 W/ReactNativeJS( 3262): Linking found multiple possible URI schemes in your Expo config.
+10-31 03:09:35.090 W/ReactNativeJS( 3262): Using 'secopsdaily'. Ignoring: vigil, com.vigil.securityintel.
+10-31 03:09:35.090 W/ReactNativeJS( 3262): Provide the preferred URI scheme to the Linking API.
+10-31 03:09:35.404 D/BackgroundTaskModule( 3262): registerTaskAsync: vigil-hourly-sync with options {minimumInterval=15.0}
+10-31 03:09:35.411 I/ReactNative( 3262): [GESTURE HANDLER] Initialize gesture handler for root view com.facebook.react.runtime.ReactSurfaceView{80a6870 V.E...... ......ID 0,0-320,640 #1}
+10-31 03:09:35.412 I/TaskService( 3262): Registered task with name 'vigil-hourly-sync' for app with scoping identifier 'com.vigil.securityintel'.
+10-31 03:09:35.430 D/BackgroundTaskConsumer( 3262): didRegister: vigil-hourly-sync
+10-31 03:09:35.500 I/ReactNative( 3262): [GESTURE HANDLER] Gesture handler is already enabled for a parent view
+10-31 03:09:35.578 E/JobScheduler.JobStatus(  520): App com.vigil.securityintel became active but still in NEVER bucket
+10-31 03:09:35.615 W/SQLiteLog( 1437): (28) double-quoted string literal: "1793243375615"
+10-31 03:09:35.615 W/SQLiteLog( 1437): (28) double-quoted string literal: "1"
+10-31 03:09:36.530 I/ImeTracker(  520): com.vigil.securityintel:534a7b8e: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-31 03:09:36.530 I/ImeTracker(  520): com.vigil.securityintel:534a7b8e: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-31 03:09:36.535 I/GoogleInputMethodService( 1500): GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.vigil.securityintel fieldId=0 fieldName=null extras=null}, false)
+10-31 03:09:36.545 I/ActivityTaskManager(  520): Displayed com.vigil.securityintel/.MainActivity for user 0: +3s769ms
+10-31 03:09:36.915 I/cr_VariationsUtils( 3262): Failed reading seed file "/data/user/0/com.vigil.securityintel/app_webview/variations_seed_new"
+10-31 03:09:36.915 I/cr_VariationsUtils( 3262): Failed reading seed file "/data/user/0/com.vigil.securityintel/app_webview/variations_seed"
+10-31 03:09:36.958 W/InputManager-JNI(  520): Input channel object '20aa107 Splash Screen com.vigil.securityintel (client)' was disposed without first being removed with the input manager!
+10-31 03:09:37.581 I/AiAiEcho( 1588): AppFetcherImplV2 updateApps package:[com.vigil.securityintel], userId:[0], reason:[package is added.].
+10-31 03:09:37.776 D/CarrierSvcBindHelper( 1042): onPackageModified: com.vigil.securityintel
+10-31 03:09:37.805 D/ImsResolver( 1042): maybeAddedImsService, packageName: com.vigil.securityintel
+10-31 03:09:37.883 W/SQLiteLog( 1437): (28) double-quoted string literal: "1793243377883"
+10-31 03:09:37.887 W/SQLiteLog( 1437): (28) double-quoted string literal: "1"
+10-31 03:09:38.363 I/AiAiEcho( 1588): AppFetcherImpl onPackageChanged com.vigil.securityintel.
+10-31 03:09:38.365 I/AiAiEcho( 1588): AppIndexer Package:[com.vigil.securityintel] UserProfile:[0] Enabled:[true].
+10-31 03:09:38.365 I/AiAiEcho( 1588): AppFetcherImplV2 updateApps package:[com.vigil.securityintel], userId:[0], reason:[package is updated.].
+10-31 03:09:39.697 D/ProfileInstaller( 3262): Installing profile for com.vigil.securityintel
+10-31 03:09:39.759 I/AiAiEcho( 1588): AppFetcherImpl onPackageChanged com.vigil.securityintel.
+10-31 03:09:39.792 I/AiAiEcho( 1588): AppIndexer Package:[com.vigil.securityintel] UserProfile:[0] Enabled:[true].
+10-31 03:09:39.792 I/AiAiEcho( 1588): AppFetcherImplV2 updateApps package:[com.vigil.securityintel], userId:[0], reason:[package is updated.].
+10-31 03:09:40.971 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:40.979 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:41.065 W/libc    ( 1437): Access denied finding property "ro.hardware.chipname"
+10-31 03:09:41.138 W/SQLiteLog( 1437): (28) double-quoted string literal: "1793243381138"
+10-31 03:09:41.138 W/SQLiteLog( 1437): (28) double-quoted string literal: "1"
+10-31 03:09:42.299 I/BlockstoreStorage( 1437): Clearing Blockstore Data for package com.vigil.securityintel [CONTEXT service_id=258 ]
+10-31 03:09:42.384 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:42.562 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:42.595 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:42.713 D/BoundBrokerSvc( 1398): onBind: Intent { act=com.google.android.gms.nearby.exposurenotification.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps }
+10-31 03:09:42.714 D/BoundBrokerSvc( 1398): Loading bound service for intent: Intent { act=com.google.android.gms.nearby.exposurenotification.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps }
+10-31 03:09:43.074 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:43.079 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:43.294 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:43.400 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:43.522 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:43.551 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+10-31 03:09:44.025 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+10-31 03:09:44.250 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:44.250 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:44.561 I/SQLiteConnection( 4379): /data/user/0/com.google.android.apps.messaging/databases/bugle_db-wal 1190712 bytes: Bigger than 1048576; truncating
+10-31 03:09:44.915 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:44.920 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:45.170 W/SQLiteLog( 1437): (28) double-quoted string literal: "1793243385170"
+10-31 03:09:45.170 W/SQLiteLog( 1437): (28) double-quoted string literal: "1"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.cellbroadcastreceiver"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.emergency"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.healthconnect.controller"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.permissioncontroller"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.permissioncontroller.role"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.permissioncontroller.safetycenter"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.settings"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.android.traceur"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.apps.gsa.opa.AssistantSettingsProvider"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.apps.messaging.settings.search"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.apps.nexuslauncher"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.apps.wellbeing"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.gms"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.gms.accountsettings.content"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.inputmethod.latin"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.marvin.talkback.preference.search.TalkBackSearchIndexablesProvider"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.settings.intelligence.provider.search"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.settings.intelligence.routines.impl"
+10-31 03:09:45.226 W/SQLiteLog( 4182): (28) double-quoted string literal: "com.google.android.settings.intelligence.smartringer.impl"
+10-31 03:09:45.447 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:45.447 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:46.953 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:46.953 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:48.762 W/libc    ( 1437): Access denied finding property "ro.hardware.chipname"
+10-31 03:09:48.794 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:48.794 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:48.959 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:48.959 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+10-31 03:09:49.400 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+10-31 03:09:49.810 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:09:49.815 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+10-31 03:09:50.574 W/ModernMediaScanner( 1623): 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+10-31 03:09:54.583 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:54.594 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:54.649 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.223 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.307 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.309 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.339 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.349 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.358 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.397 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.435 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.436 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.448 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:55.449 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:56.018 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:56.029 W/libc    ( 1043): Access denied finding property "ro.vendor.aware_available"
+10-31 03:09:57.848 D/BoundBrokerSvc( 1398): onUnbind: Intent { act=com.google.android.gms.nearby.exposurenotification.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps }
+10-31 03:10:02.002 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:10:02.002 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:10:10.789 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:10:10.789 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:10:11.876 W/ActivityManager(  520): Exception when unbinding service com.google.android.gms/.nearby.exposurenotification.WakeUpService
+10-31 03:10:11.880 W/ActivityManager(  520): Scheduling restart of crashed service com.google.android.gms/.nearby.exposurenotification.service.ExposureNotificationInternalService in 41000ms for start-requested
+10-31 03:10:11.880 W/ActivityManager(  520): Scheduling restart of crashed service com.google.android.gms/.nearby.exposurenotification.service.ExposureMatchingService in 110999ms for start-requested
+10-31 03:10:12.232 I/SQLiteCastDBHelper( 5339): Creating cast database
+10-31 03:10:13.308 W/libc    ( 5460): Access denied finding property "ro.hardware.chipname"
+10-31 03:10:13.487 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:10:13.494 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:10:19.526 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:10:19.526 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:10:19.552 W/libc    ( 5460): Access denied finding property "ro.hardware.chipname"
+10-31 03:10:19.833 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:10:19.833 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:10:27.034 I/ReactNativeJNI( 3262): instanceHandle is null, event of type topSvgLayout will be dropped
+10-31 03:11:13.834 W/libc    ( 5460): Access denied finding property "ro.hardware.chipname"
+10-31 03:11:14.034 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:11:14.034 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:11:42.816 I/A       ( 1756): Setting isLegacySQLite mode to false.
+10-31 03:12:03.802 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://news/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:03.803 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:09.914 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://cves/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:09.915 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:14.417 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:12:14.417 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:12:14.546 W/libc    ( 3076): Access denied finding property "persist.adb.tls_server.enable"
+10-31 03:12:14.547 W/libc    ( 3076): Access denied finding property "service.adb.tls.port"
+10-31 03:12:16.029 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://critical/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:16.030 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:22.154 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://kev/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:22.155 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:28.277 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://threat-intel/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:28.278 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:34.404 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://research/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:34.405 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:40.519 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://appsec/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:40.520 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:46.633 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://cloud/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:46.633 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:52.752 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://supply-chain/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:52.753 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:12:58.865 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://bookmarks/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:12:58.866 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:13:04.983 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://search/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:13:04.984 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:13:11.099 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:13:11.099 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://sync/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:13:17.224 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://settings/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:13:17.226 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:13:23.347 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily://cve/... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:13:23.348 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:13:33.547 I/ActivityTaskManager(  520): START u0 {act=android.intent.action.VIEW dat=secopsdaily:///... flg=0x10000000 pkg=com.vigil.securityintel cmp=com.vigil.securityintel/.MainActivity} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+10-31 03:13:33.551 D/WindowManagerShell(  828): onActivityRestartAttempt: ComponentInfo{com.vigil.securityintel/com.vigil.securityintel.MainActivity}
+10-31 03:13:33.738 I/ReactNative( 3262): [GESTURE HANDLER] Gesture handler is already enabled for a parent view
