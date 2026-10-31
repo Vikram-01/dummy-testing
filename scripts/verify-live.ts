@@ -20,7 +20,7 @@ import { countArticles } from '../src/lib/repo/articles';
 import { countCves, getCve } from '../src/lib/repo/cves';
 import type { SourceRow } from '../src/lib/repo/types';
 
-const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'vigil-live-'));
+const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'secopsdaily-live-'));
 const file = path.join(dir, 'vigil.db');
 const failures: string[] = [];
 const check = (ok: boolean, msg: string) => {
@@ -29,7 +29,7 @@ const check = (ok: boolean, msg: string) => {
 };
 
 async function main() {
-  console.log(`Vigil live verification — database: ${file}\n`);
+  console.log(`SecOpsDaily live verification — database: ${file}\n`);
   let db = nodeDb(file);
   await migrate(db);
   const deps = {

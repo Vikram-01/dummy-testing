@@ -45,7 +45,7 @@ export default function ArticleScreen() {
   const cves = a.cve_ids ? a.cve_ids.split(',') : [];
 
   const actions = (
-    <View style={[styles.bar, { backgroundColor: c.surface, borderColor: c.border }]}>
+    <View style={[styles.bar, { backgroundColor: c.surfaceContainer, borderColor: 'transparent' }]}>
       <View style={{ flex: 1 }}><Button label="Read original" icon={Globe} onPress={openOriginal} /></View>
       <IconButton icon={a.bookmarked ? BookmarkCheck : Bookmark} color={a.bookmarked ? c.accent : c.text} label={a.bookmarked ? 'Remove bookmark' : 'Bookmark'} onPress={async () => { await toggleBookmark(db, 'article', String(a.id)); await load(); bump(); }} />
       <IconButton icon={Share2} color={c.text} label="Share" onPress={() => Share.share({ message: `${a.title}\n${a.url}`, url: a.url })} />
@@ -56,7 +56,7 @@ export default function ArticleScreen() {
     <View style={{ flex: 1, backgroundColor: c.bg }}>
       <Stack.Screen options={{ title: a.source_name }} />
       {cves.length ? (
-        <View style={[styles.cveRow, { borderColor: c.border }]}>
+        <View style={[styles.cveRow, { borderColor: c.outlineVariant }]}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8, paddingHorizontal: space.md }}>
             {cves.map((v) => <Chip key={v} label={v} icon={Bug} color={c.warn} active onPress={() => router.push(`/cve/${v}`)} />)}
           </ScrollView>

@@ -37,7 +37,7 @@ export default function Browser() {
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>
       <Stack.Screen options={{ title: hostOf(nav.url || start) }} />
-      <View style={[styles.addr, { backgroundColor: c.surface, borderColor: c.border }]}>
+      <View style={[styles.addr, { backgroundColor: c.surfaceContainerHigh, borderColor: 'transparent' }]}>
         <Lock size={13} color={c.ok} />
         <T variant="tiny" numberOfLines={1} style={{ flex: 1 }}>{nav.url || start}</T>
       </View>
@@ -82,7 +82,7 @@ export default function Browser() {
           style={{ backgroundColor: c.bg }}
         />
       )}
-      <View style={[styles.bar, { backgroundColor: c.surface, borderColor: c.border }]}>
+      <View style={[styles.bar, { backgroundColor: c.surfaceContainer, borderColor: 'transparent' }]}>
         <IconButton icon={ArrowLeft} label="Back" color={nav.back ? c.text : c.textFaint} onPress={() => nav.back && ref.current?.goBack()} />
         <IconButton icon={ArrowRight} label="Forward" color={nav.fwd ? c.text : c.textFaint} onPress={() => nav.fwd && ref.current?.goForward()} />
         <IconButton icon={RotateCw} label="Reload" color={c.text} onPress={() => { setFailed(null); ref.current?.reload(); }} />

@@ -10,7 +10,7 @@ import { ArticleCard, CveCard } from '../../ui/components/cards';
 import { countActive, CveFilters, CveFilterSheet, EMPTY_CVE, EMPTY_NEWS, FilterButton, NewsFilters, NewsFilterSheet, SearchInput } from '../../ui/components/filters';
 import { Button, Card, Chip, EmptyState, Loading, SectionHeader, T } from '../../ui/components/primitives';
 import { useDebounced } from '../../ui/screens/NewsScreen';
-import { font, radius, space, useTheme } from '../../ui/theme';
+import { font, fonts, radius, space, useTheme } from '../../ui/theme';
 
 type Scope = 'all' | 'news' | 'cves';
 
@@ -84,7 +84,7 @@ export default function Search() {
     setCf({ ...EMPTY_CVE, severities: (x.severities ?? []) as Severity[], minScore: x.minScore ?? null, vendor: x.vendor ?? '', product: x.product ?? '', exploitedOnly: !!x.exploitedOnly, days: x.days ?? null });
   };
 
-  const input = [styles.input, { backgroundColor: c.surface, borderColor: c.border, color: c.text }];
+  const input = [styles.input, { backgroundColor: c.surfaceContainerHigh, borderColor: 'transparent', color: c.onSurface, fontFamily: fonts.regular }];
 
   return (
     <>

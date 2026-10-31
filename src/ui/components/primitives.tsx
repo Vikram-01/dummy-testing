@@ -1,72 +1,130 @@
-import { CircleAlert, Inbox, RefreshCw, type LucideIcon } from 'lucide-react-native';
+import { Check, CircleAlert, Inbox, RefreshCw, type LucideIcon } from 'lucide-react-native';
+import { ActivityIndicator, Pressable, StyleProp, StyleSheet, Text, TextProps, TextStyle, View, ViewStyle } from 'react-native';
+import { familyFor, fonts, radius, space, type, useTheme } from '../theme';
 
-import { ActivityIndicator, Pressable, StyleProp, StyleSheet, Text, TextProps, View, ViewStyle } from 'react-native';
-import { font, radius, space, useTheme } from '../theme';
+type Variant = 'display' | 'h1' | 'h2' | 'h3' | 'title' | 'body' | 'bodyLarge' | 'small' | 'tiny' | 'mono' | 'label' | 'overline';
 
-export function T({ variant = 'body', color, style, ...p }: TextProps & { variant?: 'h1' | 'h2' | 'h3' | 'body' | 'small' | 'tiny' | 'mono' | 'label'; color?: string }) {
+/**
+ * Text in the Material 3 type scale (Outfit). Android cannot synthesize
+ * weights for embedded fonts, so any fontWeight is converted to the matching
+ * Outfit family file.
+ */
+export function T({ variant = 'body', color, style, ...p }: TextProps & { variant?: Variant; color?: string }) {
   const c = useTheme();
-  const base: Record<string, object> = {
-    h1: { fontSize: font.h1, fontWeight: '700', color: c.text, letterSpacing: -0.3 },
-    h2: { fontSize: font.h2, fontWeight: '700', color: c.text },
-    h3: { fontSize: font.h3, fontWeight: '600', color: c.text, lineHeight: 21 },
-    body: { fontSize: font.body, color: c.text, lineHeight: 20 },
-    small: { fontSize: font.small, color: c.textMuted, lineHeight: 17 },
-    tiny: { fontSize: font.tiny, color: c.textFaint },
-    mono: { fontSize: font.small, color: c.text, fontFamily: font.mono },
-    label: { fontSize: font.tiny, color: c.textFaint, fontWeight: '700', letterSpacing: 0.8, textTransform: 'uppercase' },
+  const base: Record<Variant, TextStyle> = {
+    display: { ...type.headlineMedium, color: c.onSurface },
+    h1: { ...type.headlineSmall, color: c.onSurface },
+    h2: { ...type.titleLarge, color: c.onSurface },
+    h3: { ...type.titleMedium, color: c.onSurface },
+    title: { ...type.titleSmall, color: c.onSurface },
+    body: { ...type.bodyMedium, color: c.onSurface },
+    bodyLarge: { ...type.bodyLarge, color: c.onSurface },
+    small: { ...type.bodyMedium, fontSize: 13, lineHeight: 18, color: c.onSurfaceVariant },
+    tiny: { ...type.bodySmall, color: c.onSurfaceVariant },
+    mono: { fontFamily: fonts.mono, fontSize: 13, lineHeight: 18, color: c.onSurface },
+    label: { ...type.titleSmall, color: c.primary },
+    overline: { ...type.labelMedium, color: c.onSurfaceVariant },
   };
-  return <Text {...p} style={[base[variant], color ? { color } : null, style]} />;
+  const flat: TextStyle = { ...(StyleSheet.flatten([base[variant], color ? { color } : null, style]) as TextStyle) };
+  if (flat.fontWeight != null && variant !== 'mono') {
+    const { fontWeight, ...rest } = flat;
+    return <Text {...p} style={{ ...rest, fontFamily: familyFor(fontWeight) }} />;
+  }
+  return <Text {...p} style={flat} />;
 }
 
-export function Card({ children, style, onPress, accessibilityLabel }: { children: React.ReactNode; style?: StyleProp<ViewStyle>; onPress?: () => void; accessibilityLabel?: string }) {
+/** M3 card: filled ("filled") on surfaceContainerHighest, default tonal on surfaceContainerLow, or outlined. */
+export function Card({
+  children, style, onPress, accessibilityLabel, kind = 'tonal',
+}: { children: React.ReactNode; style?: StyleProp<ViewStyle>; onPress?: () => void; accessibilityLabel?: string; kind?: 'tonal' | 'filled' | 'outlined' }) {
   const c = useTheme();
-  const s = [styles.card, { backgroundColor: c.surface, borderColor: c.border }, style];
+  const bg = kind === 'filled' ? c.surfaceContainerHighest : kind === 'outlined' ? c.surface : c.surfaceContainerLow;
+  const s = [styles.card, { backgroundColor: bg, borderColor: kind === 'outlined' ? c.outlineVariant : 'transparent' }, style];
   if (!onPress) return <View style={s}>{children}</View>;
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={accessibilityLabel} style={({ pressed }) => [s, pressed && { backgroundColor: c.surfaceAlt }]}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel}
+      android_ripple={{ color: c.onSurface + '1F', borderless: false, foreground: true }}
+      style={({ pressed }) => [s, { overflow: 'hidden' }, pressed && { backgroundColor: c.surfaceContainer }]}
+    >
       {children}
     </Pressable>
   );
 }
 
+/** M3 filter chip: 32dp, 8dp corners; selected = secondaryContainer with a check mark. */
 export function Chip({ label, active, onPress, color, icon: Icon }: { label: string; active?: boolean; onPress?: () => void; color?: string; icon?: LucideIcon }) {
   const c = useTheme();
-  const tint = color ?? c.accent;
+  const selBg = color ? color + '33' : c.secondaryContainer;
+  const selFg = color ?? c.onSecondaryContainer;
+  const LeadIcon = active && !Icon ? Check : Icon;
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
       accessibilityState={{ selected: !!active }}
-      style={[styles.chip, { borderColor: active ? tint : c.border, backgroundColor: active ? tint + '22' : c.surface }]}
+      android_ripple={{ color: c.onSurface + '1F' }}
+      style={[styles.chip, { borderColor: active ? 'transparent' : c.outlineVariant, backgroundColor: active ? selBg : 'transparent' }]}
     >
-      {Icon ? <Icon size={13} color={active ? tint : c.textMuted} /> : null}
-      <Text style={{ color: active ? tint : c.textMuted, fontSize: font.small, fontWeight: '600' }}>{label}</Text>
+      {LeadIcon ? <LeadIcon size={16} color={active ? selFg : color ?? c.onSurfaceVariant} /> : null}
+      <Text style={[type.labelLarge, { color: active ? selFg : c.onSurfaceVariant }]}>{label}</Text>
     </Pressable>
   );
 }
 
-export function Button({ label, onPress, icon: Icon, kind = 'primary', disabled, loading }: { label: string; onPress: () => void; icon?: LucideIcon; kind?: 'primary' | 'secondary' | 'danger'; disabled?: boolean; loading?: boolean }) {
+/** M3 buttons: primary = filled, secondary = filled tonal, outline = outlined, danger = error tonal. */
+export function Button({
+  label, onPress, icon: Icon, kind = 'primary', disabled, loading,
+}: { label: string; onPress: () => void; icon?: LucideIcon; kind?: 'primary' | 'secondary' | 'outline' | 'danger'; disabled?: boolean; loading?: boolean }) {
   const c = useTheme();
-  const bg = kind === 'primary' ? c.accent : kind === 'danger' ? c.danger + '1F' : c.surfaceAlt;
-  const fg = kind === 'primary' ? c.onAccent : kind === 'danger' ? c.danger : c.text;
+  const bg = { primary: c.primary, secondary: c.secondaryContainer, outline: 'transparent', danger: c.errorContainer }[kind];
+  const fg = { primary: c.onPrimary, secondary: c.onSecondaryContainer, outline: c.primary, danger: c.onErrorContainer }[kind];
   return (
     <Pressable
       onPress={onPress}
       disabled={disabled || loading}
       accessibilityRole="button"
-      style={({ pressed }) => [styles.btn, { backgroundColor: bg, opacity: disabled ? 0.5 : pressed ? 0.85 : 1, borderColor: kind === 'secondary' ? c.border : 'transparent' }]}
+      android_ripple={{ color: fg + '29' }}
+      style={[styles.btn, { backgroundColor: disabled ? c.onSurface + '1F' : bg, borderColor: kind === 'outline' ? c.outline : 'transparent' }]}
     >
-      {loading ? <ActivityIndicator size="small" color={fg} /> : Icon ? <Icon size={16} color={fg} /> : null}
-      <Text style={{ color: fg, fontWeight: '700', fontSize: font.body }}>{label}</Text>
+      {loading ? <ActivityIndicator size="small" color={fg} /> : Icon ? <Icon size={18} color={disabled ? c.onSurface + '61' : fg} /> : null}
+      <Text style={[type.labelLarge, { color: disabled ? c.onSurface + '61' : fg }]}>{label}</Text>
     </Pressable>
   );
 }
 
-export function IconButton({ icon: Icon, onPress, label, color, size = 20 }: { icon: LucideIcon; onPress: () => void; label: string; color?: string; size?: number }) {
+/** M3 extended floating action button (primary container, 16dp corners). */
+export function Fab({ label, icon: Icon, onPress, loading }: { label: string; icon: LucideIcon; onPress: () => void; loading?: boolean }) {
   const c = useTheme();
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} hitSlop={10} style={({ pressed }) => [styles.iconBtn, pressed && { backgroundColor: c.surfaceAlt }]}>
-      <Icon size={size} color={color ?? c.textMuted} />
+    <Pressable
+      onPress={onPress}
+      disabled={loading}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      android_ripple={{ color: c.onPrimaryContainer + '29' }}
+      style={[styles.fab, { backgroundColor: c.primaryContainer, shadowColor: '#000' }]}
+    >
+      {loading ? <ActivityIndicator size="small" color={c.onPrimaryContainer} /> : <Icon size={22} color={c.onPrimaryContainer} />}
+      <Text style={[type.labelLarge, { color: c.onPrimaryContainer, fontSize: 15 }]}>{label}</Text>
+    </Pressable>
+  );
+}
+
+export function IconButton({ icon: Icon, onPress, label, color, size = 22, tonal }: { icon: LucideIcon; onPress: () => void; label: string; color?: string; size?: number; tonal?: boolean }) {
+  const c = useTheme();
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      hitSlop={6}
+      android_ripple={{ color: c.onSurface + '1F', borderless: true, radius: 22 }}
+      style={[styles.iconBtn, tonal && { backgroundColor: c.secondaryContainer }]}
+    >
+      <Icon size={size} color={color ?? (tonal ? c.onSecondaryContainer : c.onSurfaceVariant)} />
     </Pressable>
   );
 }
@@ -75,8 +133,8 @@ export function Loading({ label = 'Loading' }: { label?: string }) {
   const c = useTheme();
   return (
     <View style={styles.center}>
-      <ActivityIndicator color={c.accent} />
-      <T variant="small" style={{ marginTop: space.sm }}>{label}</T>
+      <ActivityIndicator color={c.primary} size="large" />
+      <T variant="small" style={{ marginTop: space.md }}>{label}</T>
     </View>
   );
 }
@@ -84,13 +142,13 @@ export function Loading({ label = 'Loading' }: { label?: string }) {
 export function EmptyState({ icon: Icon = Inbox, title, body, action }: { icon?: LucideIcon; title: string; body?: string; action?: { label: string; onPress: () => void } }) {
   const c = useTheme();
   return (
-    <View style={[styles.center, { paddingVertical: 48 }]}>
-      <View style={[styles.emptyIcon, { backgroundColor: c.surfaceAlt }]}>
-        <Icon size={26} color={c.textFaint} />
+    <View style={[styles.center, { paddingVertical: 56 }]}>
+      <View style={[styles.emptyIcon, { backgroundColor: c.primaryContainer }]}>
+        <Icon size={30} color={c.onPrimaryContainer} />
       </View>
-      <T variant="h3" style={{ marginTop: space.md, textAlign: 'center' }}>{title}</T>
-      {body ? <T variant="small" style={{ textAlign: 'center', marginTop: space.xs, maxWidth: 300 }}>{body}</T> : null}
-      {action ? <View style={{ marginTop: space.lg }}><Button label={action.label} onPress={action.onPress} icon={RefreshCw} /></View> : null}
+      <T variant="h2" style={{ marginTop: space.lg, textAlign: 'center' }}>{title}</T>
+      {body ? <T variant="small" style={{ textAlign: 'center', marginTop: space.sm, maxWidth: 300 }}>{body}</T> : null}
+      {action ? <View style={{ marginTop: space.xl }}><Button label={action.label} onPress={action.onPress} icon={RefreshCw} /></View> : null}
     </View>
   );
 }
@@ -98,10 +156,14 @@ export function EmptyState({ icon: Icon = Inbox, title, body, action }: { icon?:
 export function ErrorBanner({ message, onRetry }: { message: string; onRetry?: () => void }) {
   const c = useTheme();
   return (
-    <View style={[styles.banner, { backgroundColor: c.danger + '18', borderColor: c.danger + '55' }]} accessibilityRole="alert">
-      <CircleAlert size={16} color={c.danger} />
-      <T variant="small" color={c.text} style={{ flex: 1 }}>{message}</T>
-      {onRetry ? <Pressable onPress={onRetry} hitSlop={8}><T variant="small" color={c.danger} style={{ fontWeight: '700' }}>Retry</T></Pressable> : null}
+    <View style={[styles.banner, { backgroundColor: c.errorContainer }]} accessibilityRole="alert">
+      <CircleAlert size={20} color={c.onErrorContainer} />
+      <T variant="small" color={c.onErrorContainer} style={{ flex: 1 }}>{message}</T>
+      {onRetry ? (
+        <Pressable onPress={onRetry} hitSlop={8}>
+          <Text style={[type.labelLarge, { color: c.onErrorContainer }]}>Retry</Text>
+        </Pressable>
+      ) : null}
     </View>
   );
 }
@@ -115,18 +177,33 @@ export function SectionHeader({ title, right }: { title: string; right?: React.R
   );
 }
 
+/** M3 text button used for "View all" style actions. */
+export function TextLink({ label, onPress }: { label: string; onPress: () => void }) {
+  const c = useTheme();
+  return (
+    <Pressable onPress={onPress} hitSlop={8} accessibilityRole="button" style={styles.textLink}>
+      <Text style={[type.labelLarge, { color: c.primary }]}>{label}</Text>
+    </Pressable>
+  );
+}
+
 export function Divider() {
   const c = useTheme();
-  return <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: c.border, marginVertical: space.md }} />;
+  return <View style={{ height: StyleSheet.hairlineWidth, backgroundColor: c.outlineVariant, marginVertical: space.md }} />;
 }
 
 const styles = StyleSheet.create({
-  card: { borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.md, padding: space.md },
-  chip: { flexDirection: 'row', alignItems: 'center', gap: 5, borderWidth: 1, borderRadius: 999, paddingHorizontal: 11, paddingVertical: 6 },
-  btn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, borderRadius: radius.md, paddingHorizontal: 16, paddingVertical: 11, borderWidth: 1 },
-  iconBtn: { padding: 8, borderRadius: 999 },
+  card: { borderWidth: 1, borderRadius: radius.lg, padding: space.lg },
+  chip: { flexDirection: 'row', alignItems: 'center', gap: 6, borderWidth: 1, borderRadius: radius.sm, paddingHorizontal: 12, height: 32 },
+  btn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, borderRadius: radius.full, paddingHorizontal: 24, height: 44, borderWidth: 1, overflow: 'hidden' },
+  fab: {
+    position: 'absolute', right: 16, bottom: 20, height: 56, borderRadius: radius.lg, paddingHorizontal: 20,
+    flexDirection: 'row', alignItems: 'center', gap: 12, elevation: 3, shadowOpacity: 0.2, shadowRadius: 6, shadowOffset: { width: 0, height: 3 }, overflow: 'hidden',
+  },
+  iconBtn: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center' },
   center: { alignItems: 'center', justifyContent: 'center', padding: space.xl },
-  emptyIcon: { width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center' },
-  banner: { flexDirection: 'row', alignItems: 'center', gap: space.sm, borderWidth: 1, borderRadius: radius.md, padding: space.md },
-  sectionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: space.lg, marginBottom: space.sm },
+  emptyIcon: { width: 72, height: 72, borderRadius: 36, alignItems: 'center', justifyContent: 'center' },
+  banner: { flexDirection: 'row', alignItems: 'center', gap: space.md, borderRadius: radius.md, padding: space.lg },
+  sectionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: space.xl, marginBottom: space.sm, minHeight: 28 },
+  textLink: { paddingHorizontal: 8, paddingVertical: 4 },
 });

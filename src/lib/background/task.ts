@@ -29,7 +29,7 @@ async function notifyNewKev(ids: string[]) {
     content: {
       title: ids.length === 1 ? 'New known exploited vulnerability' : `${ids.length} new known exploited vulnerabilities`,
       body: `CISA KEV added ${ids.slice(0, 4).join(', ')}${ids.length > 4 ? ', …' : ''}`,
-      data: { url: `vigil://cve/${ids[0]}` },
+      data: { url: `secopsdaily://cve/${ids[0]}` },
     },
     trigger: null,
   });

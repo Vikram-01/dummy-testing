@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build SecOpsDaily APK
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: vigil-apk
+  group: secopsdaily-apk
   cancel-in-progress: true
 
 env:
@@ -49,14 +49,14 @@ jobs:
         run: ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a,x86_64 --stacktrace
       - name: Collect APK
         run: |
-          cp "$(ls android/app/build/outputs/apk/release/*.apk | head -1)" vigil-1.0.1.apk
-          sha256sum vigil-1.0.1.apk | tee vigil-1.0.1.apk.sha256
+          cp "$(ls android/app/build/outputs/apk/release/*.apk | head -1)" secopsdaily-1.1.0.apk
+          sha256sum secopsdaily-1.1.0.apk | tee secopsdaily-1.1.0.apk.sha256
       - uses: actions/upload-artifact@v5
         with:
-          name: vigil-apk
+          name: secopsdaily-apk
           path: |
-            vigil-1.0.1.apk
-            vigil-1.0.1.apk.sha256
+            secopsdaily-1.1.0.apk
+            secopsdaily-1.1.0.apk.sha256
 
   smoke-test:
     needs: build
@@ -66,7 +66,7 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/download-artifact@v5
         with:
-          name: vigil-apk
+          name: secopsdaily-apk
       - name: Enable KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
@@ -104,13 +104,13 @@ jobs:
     steps:
       - uses: actions/download-artifact@v5
         with:
-          name: vigil-apk
+          name: secopsdaily-apk
       - name: Publish release asset
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="vigil-v1.0.1-build${{ github.run_number }}"
-          gh release create "$TAG" vigil-1.0.1.apk vigil-1.0.1.apk.sha256 \
+          TAG="secopsdaily-v1.1.0-build${{ github.run_number }}"
+          gh release create "$TAG" secopsdaily-1.1.0.apk secopsdaily-1.1.0.apk.sha256 \
             --repo "${{ github.repository }}" --target "${{ github.sha }}" --prerelease \
-            --title "Vigil 1.0.1 (build ${{ github.run_number }})" \
+            --title "SecOpsDaily 1.1.0 (build ${{ github.run_number }})" \
             --notes "Android APK that passed an emulator launch test. Signed with the standard debug key for personal installs."

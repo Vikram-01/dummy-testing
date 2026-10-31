@@ -25,7 +25,7 @@ export interface HttpResult {
   notModified: boolean;
 }
 
-export const USER_AGENT = 'Vigil/1.0 (+security news & CVE reader; Android)';
+export const USER_AGENT = 'SecOpsDaily/1.1 (+security news & CVE reader; Android)';
 export const defaultSleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
 function retryable(status: number) {

@@ -3,12 +3,12 @@ import {
   Bookmark, Bug, Cloud, Code, FlaskConical, History, LayoutDashboard, Newspaper, Package, Radar, RefreshCw, Search, Settings, ShieldAlert, Flame, type LucideIcon,
 } from 'lucide-react-native';
 
-import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useApp } from '../../ui/AppState';
 import { Wordmark } from '../../ui/components/Logo';
-import { IconButton, T } from '../../ui/components/primitives';
-import { radius, space, useTheme } from '../../ui/theme';
+import { Button, IconButton } from '../../ui/components/primitives';
+import { fonts, radius, space, type, useTheme } from '../../ui/theme';
 
 interface NavItem { name: string; title: string; icon: LucideIcon; section?: string }
 
@@ -29,43 +29,46 @@ const NAV: NavItem[] = [
   { name: 'settings', title: 'Settings', icon: Settings },
 ];
 
+/** M3 navigation drawer: 56dp items with a full-pill secondaryContainer active indicator. */
 function Sidebar(props: DrawerContentComponentProps) {
   const c = useTheme();
   const insets = useSafeAreaInsets();
-  const { syncing, lastSummary, syncNow } = useApp();
+  const { syncing, syncNow } = useApp();
   const current = props.state.routes[props.state.index]?.name;
   return (
-    <View style={{ flex: 1, backgroundColor: c.surface }}>
-      <View style={[styles.brand, { paddingTop: insets.top + space.md, borderColor: c.border }]}>
-        <Wordmark />
+    <View style={{ flex: 1, backgroundColor: c.surfaceContainerLow }}>
+      <View style={[styles.brand, { paddingTop: insets.top + space.xl }]}>
+        <Wordmark size={22} subtitle="Security intelligence, daily" />
       </View>
-      <DrawerContentScrollView {...props} contentContainerStyle={{ paddingTop: space.sm, paddingHorizontal: space.sm }}>
+      <DrawerContentScrollView {...props} contentContainerStyle={{ paddingTop: 0, paddingHorizontal: space.md, paddingBottom: space.lg }}>
         {NAV.map((n) => {
           const active = current === n.name;
           const Icon = n.icon;
           return (
             <View key={n.name}>
-              {n.section ? <T variant="label" style={{ marginTop: space.md, marginBottom: 4, marginLeft: space.md }}>{n.section}</T> : null}
+              {n.section ? (
+                <>
+                  {n.name !== 'index' ? <View style={[styles.divider, { backgroundColor: c.outlineVariant }]} /> : null}
+                  <Text style={[type.titleSmall, styles.section, { color: c.onSurfaceVariant }]}>{n.section}</Text>
+                </>
+              ) : null}
               <Pressable
                 onPress={() => props.navigation.navigate(n.name)}
                 accessibilityRole="button"
                 accessibilityState={{ selected: active }}
-                style={({ pressed }) => [styles.item, { backgroundColor: active ? c.accentSoft : pressed ? c.surfaceAlt : 'transparent' }]}
+                android_ripple={{ color: c.onSurface + '1F' }}
+                style={[styles.item, { backgroundColor: active ? c.secondaryContainer : 'transparent' }]}
               >
-                <Icon size={18} color={active ? c.accent : c.textMuted} />
-                <T variant="body" color={active ? c.accent : c.text} style={{ fontWeight: active ? '700' : '500' }}>{n.title}</T>
+                <Icon size={22} color={active ? c.onSecondaryContainer : c.onSurfaceVariant} />
+                <Text style={[type.labelLarge, { color: active ? c.onSecondaryContainer : c.onSurfaceVariant, fontSize: 15 }]}>{n.title}</Text>
               </Pressable>
             </View>
           );
         })}
       </DrawerContentScrollView>
-      <Pressable onPress={() => syncNow()} disabled={syncing} style={[styles.footer, { borderColor: c.border, paddingBottom: insets.bottom + space.md }]} accessibilityRole="button" accessibilityLabel="Sync now">
-        {syncing ? <ActivityIndicator size="small" color={c.accent} /> : <RefreshCw size={16} color={c.accent} />}
-        <View>
-          <T variant="small" color={c.text} style={{ fontWeight: '700' }}>{syncing ? 'Syncing…' : 'Sync now'}</T>
-          {lastSummary?.runId ? <T variant="tiny" numberOfLines={1}>Last run this session: {lastSummary.status}</T> : null}
-        </View>
-      </Pressable>
+      <View style={{ paddingHorizontal: space.lg, paddingBottom: insets.bottom + space.lg, paddingTop: space.sm }}>
+        <Button label={syncing ? 'Syncing…' : 'Sync now'} icon={RefreshCw} kind="secondary" loading={syncing} onPress={() => void syncNow()} />
+      </View>
     </View>
   );
 }
@@ -74,8 +77,8 @@ function HeaderSync() {
   const { syncing, syncNow } = useApp();
   const c = useTheme();
   return (
-    <View style={{ marginRight: 8 }}>
-      {syncing ? <ActivityIndicator style={{ padding: 8 }} color={c.accent} /> : <IconButton icon={RefreshCw} label="Sync now" onPress={() => syncNow()} color={c.text} />}
+    <View style={{ marginRight: 4 }}>
+      {syncing ? <ActivityIndicator style={{ padding: 12 }} color={c.primary} /> : <IconButton icon={RefreshCw} label="Sync now" onPress={() => void syncNow()} color={c.onSurfaceVariant} />}
     </View>
   );
 }
@@ -87,11 +90,12 @@ export default function DrawerLayout() {
       drawerContent={(p) => <Sidebar {...p} />}
       screenOptions={{
         headerStyle: { backgroundColor: c.surface },
-        headerTintColor: c.text,
-        headerTitleStyle: { fontWeight: '700' },
+        headerTintColor: c.onSurface,
+        headerTitleStyle: { fontFamily: fonts.regular, fontSize: 22 },
         headerShadowVisible: false,
-        drawerStyle: { backgroundColor: c.surface, width: 300 },
-        sceneStyle: { backgroundColor: c.bg },
+        drawerStyle: { backgroundColor: c.surfaceContainerLow, width: 320, borderTopRightRadius: radius.lg, borderBottomRightRadius: radius.lg, overflow: 'hidden' },
+        overlayColor: c.scrim + '66',
+        sceneStyle: { backgroundColor: c.surface },
         headerRight: () => <HeaderSync />,
         drawerType: 'front',
       }}
@@ -104,7 +108,8 @@ export default function DrawerLayout() {
 }
 
 const styles = StyleSheet.create({
-  brand: { paddingHorizontal: space.lg, paddingBottom: space.md, borderBottomWidth: StyleSheet.hairlineWidth },
-  item: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: space.md, paddingVertical: 10, borderRadius: radius.md },
-  footer: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: space.lg, paddingTop: space.md, borderTopWidth: StyleSheet.hairlineWidth },
+  brand: { paddingHorizontal: space.xl, paddingBottom: space.lg },
+  section: { marginLeft: space.lg, marginTop: space.sm, marginBottom: space.xs, height: 40, textAlignVertical: 'center', lineHeight: 40 },
+  divider: { height: StyleSheet.hairlineWidth, marginHorizontal: space.lg, marginTop: space.sm },
+  item: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingLeft: space.lg, paddingRight: space.xl, height: 56, borderRadius: radius.full, overflow: 'hidden' },
 });

@@ -1,6 +1,13 @@
-# Vigil — Security News and CVE Intelligence for Android
+# SecOpsDaily — Security News and CVE Intelligence for Android
 
-Vigil collects cybersecurity news from 22 publishers and vulnerability intelligence from NVD, CISA KEV, GitHub Security Advisories, CVE.org and OSV.dev, stores it in an on-device SQLite database, and refreshes it automatically every hour. Everything synced in the last 5 days stays readable offline.
+SecOpsDaily collects cybersecurity news from 22 publishers and vulnerability intelligence from NVD, CISA KEV, GitHub Security Advisories, CVE.org and OSV.dev, stores it in an on-device SQLite database, and refreshes it automatically every hour. Everything synced in the last 5 days stays readable offline.
+
+## Design
+
+- Material Design 3: color roles generated with Google's material-color-utilities (Vibrant scheme from the logo blue), M3 type scale, shape scale, navigation drawer, search bar, filter chips, bottom sheets and an extended FAB. Dark theme by default, light and system themes in Settings.
+- Typeface: Outfit (SIL Open Font License), embedded in the app.
+- Logo: a security shield carrying a live pulse with an amber "daily alert" badge. Source files are in `brand/` (`logo.py` regenerates every launcher, adaptive, monochrome, splash and notification asset).
+- Icons: Lucide.
 
 ## What it does
 
@@ -38,7 +45,7 @@ After each sync, articles, CVEs and sync logs older than the retention window (d
 - The in-app browser allows only https navigation, blocks every other scheme, has no file or content access, no pop-ups, no mixed content, incognito storage and no bridge into the app.
 - XML entity declarations are rejected (XXE / entity-expansion guard). Responses are size-capped. HTTP is upgraded to HTTPS.
 - Android backups of app data are disabled; storage, camera and microphone permissions are blocked.
-- Vigil only reads publishers' own RSS/Atom feeds and public APIs with an identifying User-Agent; it does not crawl article pages.
+- SecOpsDaily only reads publishers' own RSS/Atom feeds and public APIs with an identifying User-Agent; it does not crawl article pages.
 
 ## Install and run
 
@@ -78,13 +85,13 @@ For Google Play use `npm run build:aab`.
 npx expo run:android     # development build on a connected device or emulator
 ```
 
-Expo Go cannot run Vigil because it uses native modules (SQLite, background tasks, secure storage, WebView).
+Expo Go cannot run SecOpsDaily because it uses native modules (SQLite, background tasks, secure storage, WebView).
 
 ## First launch
 
-1. Open Vigil. The first sync starts automatically and pulls 5 days of news, CVEs and the KEV catalog. Without an NVD key the CVE part takes a few minutes.
+1. Open SecOpsDaily. The first sync starts automatically and pulls 5 days of news, CVEs and the KEV catalog. Without an NVD key the CVE part takes a few minutes.
 2. In Settings, optionally add an NVD API key (free) to make CVE syncs about 10 times faster, and allow KEV notifications.
-3. On some phones (Xiaomi, Oppo, Vivo, Samsung "deep sleep"), set battery usage for Vigil to "Unrestricted" so the hourly background sync is not suspended.
+3. On some phones (Xiaomi, Oppo, Vivo, Samsung "deep sleep"), set battery usage for SecOpsDaily to "Unrestricted" so the hourly background sync is not suspended.
 
 ## Project layout
 
@@ -111,5 +118,5 @@ scripts/              Live verification and icon generation
 ## Notes
 
 - Some feeds publish summaries only; those articles open in the in-app browser.
-- Background timing on Android is managed by the OS (WorkManager). Vigil cannot guarantee an exact minute, but it never runs more often than the interval and catches up on launch.
+- Background timing on Android is managed by the OS (WorkManager). SecOpsDaily cannot guarantee an exact minute, but it never runs more often than the interval and catches up on launch.
 - NVD and CISA data are US-government public domain; GitHub advisories are CC-BY 4.0; OSV data is CC-BY 4.0. Article text belongs to its publishers and is shown only as their feeds provide it.

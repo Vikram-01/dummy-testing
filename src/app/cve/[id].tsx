@@ -135,13 +135,13 @@ export default function CveDetail() {
         }}
       />
 
-      <View style={[styles.hero, { backgroundColor: c.sevSoft[v.severity], borderColor: c.sev[v.severity] + '55' }]}>
+      <View style={[styles.hero, { backgroundColor: c.sevSoft[v.severity] }]}>
         <View style={styles.row}>
-          <T variant="mono" style={{ fontSize: 16, fontWeight: '800' }}>{v.id}</T>
+          <T variant="mono" color={c.sevOn[v.severity]} style={{ fontSize: 16, fontWeight: '800' }}>{v.id}</T>
           <View style={{ flex: 1 }} />
           <SeverityBadge severity={v.severity} score={v.cvss_score} />
         </View>
-        {v.title ? <T variant="h2" style={{ marginTop: space.sm }}>{v.title}</T> : null}
+        {v.title ? <T variant="h2" color={c.sevOn[v.severity]} style={{ marginTop: space.sm }}>{v.title}</T> : null}
         <View style={[styles.row, { flexWrap: 'wrap', gap: 6, marginTop: space.sm }]}>
           {v.kev ? <Tag label="Exploitation verified by CISA KEV" color={c.danger} icon={ShieldAlert} /> : <Tag label="Not in CISA KEV" icon={ShieldCheck} />}
           {v.kev_ransomware === 'Known' ? <Tag label="Known ransomware campaign use" color={c.danger} icon={Skull} /> : null}
@@ -265,7 +265,7 @@ export default function CveDetail() {
 
 const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center' },
-  hero: { borderWidth: 1, borderRadius: 12, padding: space.md },
+  hero: { borderRadius: 28, padding: space.xl },
   facts: { flexDirection: 'row', flexWrap: 'wrap', rowGap: space.md },
   fact: { width: '50%', paddingRight: space.sm },
   affected: { flexDirection: 'row', gap: 8, paddingVertical: 6, borderBottomWidth: StyleSheet.hairlineWidth, alignItems: 'flex-start' },

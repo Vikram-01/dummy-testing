@@ -64,7 +64,7 @@ function SourceStatus({ s, onSync, busy }: { s: SourceRow; onSync: () => void; b
   const c = useTheme();
   const tone = s.last_status === 'ok' ? c.ok : s.last_status === 'error' ? c.danger : c.textFaint;
   return (
-    <View style={[styles.sourceRow, { borderColor: c.border }]}>
+    <View style={[styles.sourceRow, { borderColor: c.outlineVariant }]}>
       <View style={[styles.dot, { backgroundColor: tone }]} />
       <View style={{ flex: 1 }}>
         <T variant="body" style={{ fontWeight: '600' }} numberOfLines={1}>{s.name}</T>

@@ -1,36 +1,59 @@
+import { Text, View } from 'react-native';
+import Svg, { Circle, ClipPath, Defs, G, LinearGradient, Path, Polyline, Rect, Stop } from 'react-native-svg';
+import { fonts, useTheme } from '../theme';
 
-import { View } from 'react-native';
-import Svg, { Circle, Defs, LinearGradient, Path, Stop } from 'react-native-svg';
-import { useTheme } from '../theme';
-import { T } from './primitives';
+/**
+ * SecOpsDaily mark: a security shield carrying a live pulse, with an amber
+ * "daily alert" badge. Same geometry as brand/logo.py (512-unit grid).
+ */
+const SH = 'M256 92 L392 140 V250 C392 342 334 404 256 436 C178 404 120 342 120 250 V140 Z';
+const PULSE = '92,266 188,266 214,224 244,318 276,176 304,266 432,266';
 
-/** Vigil mark: a shield with a radar sweep — watchfulness over the threat landscape. */
-export function LogoMark({ size = 32 }: { size?: number }) {
+export function LogoMark({ size = 40, tile = true }: { size?: number; tile?: boolean }) {
   return (
-    <Svg width={size} height={size} viewBox="0 0 64 64" accessibilityLabel="Vigil logo">
+    <Svg width={size} height={size} viewBox="0 0 512 512" accessibilityLabel="SecOpsDaily logo">
       <Defs>
-        <LinearGradient id="vg" x1="0" y1="0" x2="1" y2="1">
-          <Stop offset="0" stopColor="#2DD4BF" />
-          <Stop offset="1" stopColor="#0E7490" />
+        <LinearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <Stop offset="0" stopColor="#1A73E8" />
+          <Stop offset="1" stopColor="#5B3DF5" />
         </LinearGradient>
+        <LinearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
+          <Stop offset="0" stopColor="#1A73E8" />
+          <Stop offset="1" stopColor="#5B3DF5" />
+        </LinearGradient>
+        <LinearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+          <Stop offset="0" stopColor="#FFFFFF" />
+          <Stop offset="1" stopColor="#E8EEFF" />
+        </LinearGradient>
+        <ClipPath id="sh">
+          <Path d={SH} />
+        </ClipPath>
       </Defs>
-      <Path d="M32 4 L54 12 V30 C54 44 44.5 54.5 32 60 C19.5 54.5 10 44 10 30 V12 Z" fill="url(#vg)" />
-      <Circle cx="32" cy="31" r="14" fill="none" stroke="#04201C" strokeWidth="2.5" strokeOpacity={0.55} />
-      <Circle cx="32" cy="31" r="7" fill="none" stroke="#04201C" strokeWidth="2.5" strokeOpacity={0.55} />
-      <Path d="M32 31 L43.5 22.5 A14 14 0 0 1 46 31 Z" fill="#04201C" fillOpacity={0.75} />
-      <Circle cx="32" cy="31" r="2.6" fill="#04201C" />
+      {tile ? <Rect width="512" height="512" rx="128" fill="url(#bg)" /> : null}
+      <G transform={tile ? 'translate(46 40) scale(0.82)' : undefined}>
+        <Path d={SH} fill="url(#face)" />
+        <G clipPath="url(#sh)">
+          <Polyline points={PULSE} fill="none" stroke="url(#ink)" strokeWidth={28} strokeLinejoin="round" strokeLinecap="round" />
+        </G>
+        <Circle cx="380" cy="138" r="46" fill="#FFFFFF" />
+        <Circle cx="380" cy="138" r="30" fill="#FFB300" />
+      </G>
     </Svg>
   );
 }
 
-export function Wordmark() {
+/** "SecOps" in Outfit Bold + "Daily" in Outfit Regular, primary color. */
+export function Wordmark({ size = 22, subtitle }: { size?: number; subtitle?: string }) {
   const c = useTheme();
   return (
-    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-      <LogoMark size={34} />
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+      <LogoMark size={size * 1.9} />
       <View>
-        <T variant="h2" style={{ letterSpacing: 1.5 }}>VIGIL</T>
-        <T variant="tiny" color={c.textMuted}>Security intelligence</T>
+        <Text style={{ fontSize: size, lineHeight: size * 1.25 }}>
+          <Text style={{ fontFamily: fonts.bold, color: c.onSurface }}>SecOps</Text>
+          <Text style={{ fontFamily: fonts.regular, color: c.primary }}>Daily</Text>
+        </Text>
+        {subtitle ? <Text style={{ fontFamily: fonts.medium, fontSize: 12, color: c.onSurfaceVariant, letterSpacing: 0.4 }}>{subtitle}</Text> : null}
       </View>
     </View>
   );

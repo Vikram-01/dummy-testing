@@ -1,4 +1,4 @@
-import { ArrowDownWideNarrow, Check, ShieldAlert, SlidersHorizontal, X } from 'lucide-react-native';
+import { ArrowDownWideNarrow, Check, Search, ShieldAlert, SlidersHorizontal, X } from 'lucide-react-native';
 import { Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { CATEGORIES } from '../../lib/config/categories';
@@ -6,8 +6,8 @@ import { NEWS_SOURCES } from '../../lib/config/sources';
 import type { CveSort } from '../../lib/repo/cves';
 import { SEVERITIES, Severity } from '../../lib/repo/types';
 import { sevLabel } from '../format';
-import { font, radius, space, useTheme } from '../theme';
-import { Button, Chip, T } from './primitives';
+import { radius, space, type, useTheme } from '../theme';
+import { Button, Chip, IconButton, T, TextLink } from './primitives';
 
 export interface NewsFilters {
   sourceIds: string[];
@@ -47,21 +47,23 @@ export function countActive(f: Partial<NewsFilters & CveFilters>): number {
   return n;
 }
 
+/** M3 modal bottom sheet: 28dp top corners, drag handle, surfaceContainerLow. */
 function Sheet({ visible, onClose, title, children, onReset }: { visible: boolean; onClose: () => void; title: string; children: React.ReactNode; onReset: () => void }) {
   const c = useTheme();
   const insets = useSafeAreaInsets();
   return (
-    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
-      <Pressable style={styles.scrim} onPress={onClose} accessibilityLabel="Close filters" />
-      <View style={[styles.sheet, { backgroundColor: c.surface, borderColor: c.border, paddingBottom: insets.bottom + space.md }]}>
+    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose} statusBarTranslucent>
+      <Pressable style={[styles.scrim, { backgroundColor: c.scrim + '66' }]} onPress={onClose} accessibilityLabel="Close filters" />
+      <View style={[styles.sheet, { backgroundColor: c.surfaceContainerLow, paddingBottom: insets.bottom + space.lg }]}>
+        <View style={[styles.handle, { backgroundColor: c.onSurfaceVariant + '66' }]} />
         <View style={styles.sheetHead}>
           <T variant="h2">{title}</T>
           <View style={{ flex: 1 }} />
-          <Pressable onPress={onReset} hitSlop={8}><T variant="small" color={c.accent} style={{ fontWeight: '700' }}>Reset</T></Pressable>
-          <Pressable onPress={onClose} hitSlop={8} style={{ marginLeft: space.lg }} accessibilityLabel="Close"><X size={20} color={c.textMuted} /></Pressable>
+          <TextLink label="Reset" onPress={onReset} />
+          <IconButton icon={X} label="Close" onPress={onClose} />
         </View>
-        <ScrollView style={{ maxHeight: 520 }} contentContainerStyle={{ paddingBottom: space.md }}>{children}</ScrollView>
-        <Button label="Apply" icon={Check} onPress={onClose} />
+        <ScrollView style={{ maxHeight: 520 }} contentContainerStyle={{ paddingBottom: space.lg }}>{children}</ScrollView>
+        <Button label="Show results" icon={Check} onPress={onClose} />
       </View>
     </Modal>
   );
@@ -109,7 +111,7 @@ const SORTS: { v: CveSort; label: string }[] = [
 
 export function CveFilterSheet({ visible, onClose, value, onChange, lockSeverity }: { visible: boolean; onClose: () => void; value: CveFilters; onChange: (v: CveFilters) => void; lockSeverity?: boolean }) {
   const c = useTheme();
-  const input = [styles.input, { backgroundColor: c.surfaceAlt, borderColor: c.border, color: c.text }];
+  const input = [styles.input, { backgroundColor: 'transparent', borderColor: c.outline, color: c.onSurface }];
   return (
     <Sheet visible={visible} onClose={onClose} title="Filter CVEs" onReset={() => onChange(EMPTY_CVE)}>
       <Group title="Sort by">
@@ -132,37 +134,44 @@ export function CveFilterSheet({ visible, onClose, value, onChange, lockSeverity
       </Group>
       <View style={{ marginTop: space.md, gap: space.sm }}>
         <T variant="label">Vendor and product</T>
-        <TextInput style={input} placeholder="Vendor (e.g. microsoft)" placeholderTextColor={c.textFaint} autoCapitalize="none" autoCorrect={false} value={value.vendor} onChangeText={(t) => onChange({ ...value, vendor: t })} maxLength={80} />
-        <TextInput style={input} placeholder="Product (e.g. exchange)" placeholderTextColor={c.textFaint} autoCapitalize="none" autoCorrect={false} value={value.product} onChangeText={(t) => onChange({ ...value, product: t })} maxLength={80} />
+        <TextInput style={input} placeholder="Vendor (e.g. microsoft)" placeholderTextColor={c.onSurfaceVariant} autoCapitalize="none" autoCorrect={false} value={value.vendor} onChangeText={(t) => onChange({ ...value, vendor: t })} maxLength={80} />
+        <TextInput style={input} placeholder="Product (e.g. exchange)" placeholderTextColor={c.onSurfaceVariant} autoCapitalize="none" autoCorrect={false} value={value.product} onChangeText={(t) => onChange({ ...value, product: t })} maxLength={80} />
       </View>
     </Sheet>
   );
 }
 
+/** M3 search bar: 56dp pill on surfaceContainerHigh with a leading search icon. */
 export function SearchInput({ value, onChange, placeholder, onSubmit }: { value: string; onChange: (s: string) => void; placeholder: string; onSubmit?: () => void }) {
   const c = useTheme();
   return (
-    <TextInput
-      style={[styles.input, { backgroundColor: c.surface, borderColor: c.border, color: c.text }]}
-      placeholder={placeholder}
-      placeholderTextColor={c.textFaint}
-      value={value}
-      onChangeText={onChange}
-      autoCapitalize="none"
-      autoCorrect={false}
-      returnKeyType="search"
-      onSubmitEditing={onSubmit}
-      clearButtonMode="while-editing"
-      maxLength={120}
-      accessibilityLabel={placeholder}
-    />
+    <View style={[styles.searchBar, { backgroundColor: c.surfaceContainerHigh }]}>
+      <Search size={20} color={c.onSurfaceVariant} />
+      <TextInput
+        style={[type.bodyLarge, styles.searchInput, { color: c.onSurface }]}
+        placeholder={placeholder}
+        placeholderTextColor={c.onSurfaceVariant}
+        value={value}
+        onChangeText={onChange}
+        autoCapitalize="none"
+        autoCorrect={false}
+        returnKeyType="search"
+        onSubmitEditing={onSubmit}
+        maxLength={120}
+        accessibilityLabel={placeholder}
+      />
+      {value ? <IconButton icon={X} label="Clear search" size={18} onPress={() => onChange('')} /> : null}
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  scrim: { flex: 1, backgroundColor: '#0008' },
-  sheet: { borderTopLeftRadius: radius.lg, borderTopRightRadius: radius.lg, borderWidth: StyleSheet.hairlineWidth, padding: space.lg },
+  scrim: { flex: 1 },
+  sheet: { borderTopLeftRadius: radius.xl, borderTopRightRadius: radius.xl, paddingHorizontal: space.xl, paddingTop: space.sm },
+  handle: { width: 32, height: 4, borderRadius: 2, alignSelf: 'center', marginTop: space.sm, marginBottom: space.md },
   sheetHead: { flexDirection: 'row', alignItems: 'center', marginBottom: space.sm },
   wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  input: { borderWidth: 1, borderRadius: radius.md, paddingHorizontal: space.md, paddingVertical: 10, fontSize: font.body },
+  input: { ...type.bodyLarge, borderWidth: 1, borderRadius: radius.xs, paddingHorizontal: space.lg, height: 56 },
+  searchBar: { flexDirection: 'row', alignItems: 'center', gap: space.md, height: 56, borderRadius: radius.xl, paddingLeft: space.lg, paddingRight: space.xs },
+  searchInput: { flex: 1, height: 56, paddingVertical: 0 },
 });

@@ -8,7 +8,7 @@ import { getSecret, mask, setSecret, type SecretKey } from '../../lib/secrets';
 import { purgeExpired } from '../../lib/sync/retention';
 import { useApp, useDb } from '../../ui/AppState';
 import { Button, Card, Chip, SectionHeader, T } from '../../ui/components/primitives';
-import { font, radius, space, useTheme } from '../../ui/theme';
+import { font, fonts, radius, space, useTheme } from '../../ui/theme';
 
 function Row({ icon: Icon, title, body, right }: { icon: typeof Sun; title: string; body?: string; right?: React.ReactNode }) {
   const c = useTheme();
@@ -37,7 +37,7 @@ function SecretField({ k, label, help, link }: { k: SecretKey; label: string; he
       <Row icon={KeyRound} title={label} body={`${mask(current)} · stored in the Android Keystore`} />
       <T variant="tiny">{help} <T variant="tiny" color={c.accent} onPress={() => Linking.openURL(link)}>Get one</T></T>
       <TextInput
-        style={[styles.input, { backgroundColor: c.surfaceAlt, borderColor: err ? c.danger : c.border, color: c.text }]}
+        style={[styles.input, { backgroundColor: 'transparent', borderColor: err ? c.error : c.outline, color: c.onSurface, fontFamily: fonts.regular }]}
         value={draft}
         onChangeText={(t) => { setDraft(t); setErr(null); }}
         placeholder={current ? 'Enter a new value to replace' : 'Paste key'}
@@ -68,7 +68,7 @@ export default function SettingsScreen() {
   const db = useDb();
   const c = useTheme();
   const { settings, updateSettings, bump } = useApp();
-  const sw = { trackColor: { true: c.accent, false: c.border }, thumbColor: '#FFFFFF' };
+  const sw = { trackColor: { true: c.primary, false: c.surfaceContainerHighest }, ios_backgroundColor: c.surfaceContainerHighest };
 
   return (
     <ScrollView contentContainerStyle={{ padding: space.md, paddingBottom: 64 }}>
@@ -91,21 +91,19 @@ export default function SettingsScreen() {
           ))}
         </View>
         <View style={{ height: space.md }} />
-        <Row icon={Wifi} title="Background sync on Wi-Fi only" body="Manual sync always works on any connection." right={<Switch {...sw} value={settings.wifiOnly} onValueChange={(v) => updateSettings({ wifiOnly: v })} />} />
+        <Row icon={Wifi} title="Background sync on Wi-Fi only" body="Manual sync always works on any connection." right={<Switch {...sw} thumbColor={settings.wifiOnly ? c.onPrimary : c.outline} value={settings.wifiOnly} onValueChange={(v) => updateSettings({ wifiOnly: v })} />} />
         <View style={{ height: space.md }} />
         <Row
           icon={BellRing}
           title="Alert on new CISA KEV entries"
           body="Local notification when CISA adds a known exploited vulnerability."
           right={
-            <Switch
-              {...sw}
-              value={settings.kevNotifications}
+            <Switch {...sw} thumbColor={settings.kevNotifications ? c.onPrimary : c.outline} value={settings.kevNotifications}
               onValueChange={async (v) => {
                 if (v) {
                   const p = await Notifications.requestPermissionsAsync();
                   if (!p.granted) {
-                    Alert.alert('Notifications are off', 'Allow notifications for Vigil in Android settings to receive KEV alerts.');
+                    Alert.alert('Notifications are off', 'Allow notifications for SecOpsDaily in Android settings to receive KEV alerts.');
                     return;
                   }
                 }
@@ -153,7 +151,7 @@ export default function SettingsScreen() {
               <T variant="body">{s.name}</T>
               <T variant="tiny" numberOfLines={1}>{s.kind === 'news' ? 'News feed' : 'Vulnerability data'} · {s.homepage.replace(/^https:\/\//, '')}</T>
             </View>
-            <Switch {...sw} value={settings.enabledSources[s.id] ?? true} onValueChange={(v) => updateSettings({ enabledSources: { ...settings.enabledSources, [s.id]: v } })} />
+            <Switch {...sw} thumbColor={(settings.enabledSources[s.id] ?? true) ? c.onPrimary : c.outline} value={settings.enabledSources[s.id] ?? true} onValueChange={(v) => updateSettings({ enabledSources: { ...settings.enabledSources, [s.id]: v } })} />
           </View>
         ))}
       </Card>
@@ -161,9 +159,9 @@ export default function SettingsScreen() {
       <SectionHeader title="About" />
       <Card>
         <T variant="small">
-          Vigil reads publishers&apos; official RSS/Atom feeds and the public NVD, CISA KEV, GitHub Advisory, CVE.org and OSV.dev APIs over HTTPS. Article pages open in a locked-down browser without access to app data. Exploitation is shown as verified only when CISA lists the CVE in KEV; NVD &ldquo;Exploit&rdquo; references are labelled unverified.
+          SecOpsDaily reads publishers&apos; official RSS/Atom feeds and the public NVD, CISA KEV, GitHub Advisory, CVE.org and OSV.dev APIs over HTTPS. Article pages open in a locked-down browser without access to app data. Exploitation is shown as verified only when CISA lists the CVE in KEV; NVD &ldquo;Exploit&rdquo; references are labelled unverified.
         </T>
-        <T variant="tiny" style={{ marginTop: space.sm }}>Vigil 1.0.0</T>
+        <T variant="tiny" style={{ marginTop: space.sm }}>SecOpsDaily 1.1.0</T>
       </Card>
     </ScrollView>
   );
