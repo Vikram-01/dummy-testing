@@ -12,7 +12,7 @@ run locally on 2 Nov 2026. Everything below uses **mock / fictional data only**.
 | On-device engine (end-to-end with stubbed Keystore/filesystem) | `npm run test:engine` | 19 / 19 |
 | Backend API (auth, MFA, rotation + reuse detection, logout, register → empty data, PAN, consents, reports, password reset, XIRR) | `pytest` | 11 / 11 |
 | JS bundle compiles for Android (Hermes bytecode), release & debug | `expo export --platform android` | both OK; release bundle contains **no** sample data |
-| Native project generation | `expo prebuild` | minSdk 26, target/compile 36, ABIs arm64-v8a + x86_64, cleartext off, backup off, SMS/contacts/location/storage permissions removed, release signing from env only |
+| Native project generation | `expo prebuild` | minSdk 26, targetSdk 36, compileSdk 37, ABIs arm64-v8a + x86_64, cleartext off, backup off, SMS/contacts/location/storage permissions removed, release signing from env only |
 | Gradle APK build + `aapt2` / `apksigner` inspection | CI `build` job | see the workflow run log |
 
 ### On-device engine checks (19)

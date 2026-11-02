@@ -30,7 +30,7 @@ install. See [docs/BUILD.md](docs/BUILD.md).
 ## Quick facts
 
 - Application ID `com.personalfinance360.app` (debug variant: `com.personalfinance360.app.debug`)
-- minSdk 26, targetSdk 36, ABIs `arm64-v8a` + `x86_64` (64-bit only)
+- minSdk 26, targetSdk 36 (compileSdk 37), ABIs `arm64-v8a` + `x86_64` (64-bit only)
 - No analytics or crash-reporting SDKs. No SMS, contacts, location or storage permissions.
 - Never collects bank OTPs, UPI/ATM/trading PINs, CVV, or bank/broker passwords.
 
