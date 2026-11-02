@@ -1,0 +1,3573 @@
+{
+ "is_demo": true,
+ "as_of": "2026-11-01",
+ "profile": {
+  "id": "usr_demo",
+  "full_name": "Demo User",
+  "email": "demo@pf360.dev",
+  "phone_masked": "+91 XXXXX X4321",
+  "pan_masked": "XXXXX1234X",
+  "kyc_status": "Demo"
+ },
+ "dashboard": {
+  "as_of": "2026-11-01",
+  "net_worth": 1214622.66,
+  "total_assets": 5176482.66,
+  "totals": {
+   "bank": 418161.15,
+   "demat": 992330.0,
+   "mutual_funds": 960291.51,
+   "fixed_deposits": 540000.0,
+   "retirement": 2265700.0,
+   "liabilities": 3961860.0
+  },
+  "net_worth_change_1m": 18135.58,
+  "net_worth_history": [
+   {
+    "month": "2025-11",
+    "net_worth": 1038271.51,
+    "assets": 4617422.53,
+    "liabilities": 4247113.92
+   },
+   {
+    "month": "2025-12",
+    "net_worth": 1047619.98,
+    "assets": 4664010.88,
+    "liabilities": 4223342.76
+   },
+   {
+    "month": "2026-01",
+    "net_worth": 1065219.34,
+    "assets": 4710599.22,
+    "liabilities": 4199571.6
+   },
+   {
+    "month": "2026-02",
+    "net_worth": 1090799.58,
+    "assets": 4757187.56,
+    "liabilities": 4175800.44
+   },
+   {
+    "month": "2026-03",
+    "net_worth": 1102910.32,
+    "assets": 4803775.91,
+    "liabilities": 4152029.28
+   },
+   {
+    "month": "2026-04",
+    "net_worth": 1105618.8,
+    "assets": 4850364.25,
+    "liabilities": 4128258.12
+   },
+   {
+    "month": "2026-05",
+    "net_worth": 1126038.38,
+    "assets": 4896952.6,
+    "liabilities": 4104486.96
+   },
+   {
+    "month": "2026-06",
+    "net_worth": 1135144.12,
+    "assets": 4943540.94,
+    "liabilities": 4080715.8
+   },
+   {
+    "month": "2026-07",
+    "net_worth": 1155793.19,
+    "assets": 4990129.28,
+    "liabilities": 4056944.64
+   },
+   {
+    "month": "2026-08",
+    "net_worth": 1173527.34,
+    "assets": 5036717.63,
+    "liabilities": 4033173.48
+   },
+   {
+    "month": "2026-09",
+    "net_worth": 1190558.3,
+    "assets": 5083305.97,
+    "liabilities": 4009402.32
+   },
+   {
+    "month": "2026-10",
+    "net_worth": 1196487.08,
+    "assets": 5129894.32,
+    "liabilities": 3985631.16
+   },
+   {
+    "month": "2026-11",
+    "net_worth": 1214622.66,
+    "assets": 5176482.66,
+    "liabilities": 3961860.0
+   }
+  ],
+  "sync": {
+   "status": "partial",
+   "last_synced_at": "2026-11-01T06:32:00+05:30",
+   "institutions_ok": 4,
+   "institutions_failed": 1,
+   "items": [
+    {
+     "institution": "Demo Bank of India",
+     "status": "ok",
+     "message": null
+    },
+    {
+     "institution": "Sample Co-operative Bank",
+     "status": "ok",
+     "message": null
+    },
+    {
+     "institution": "NSDL / CDSL (demat)",
+     "status": "ok",
+     "message": null
+    },
+    {
+     "institution": "UTI Mutual Fund + other AMCs",
+     "status": "ok",
+     "message": null
+    },
+    {
+     "institution": "EPFO",
+     "status": "stale",
+     "message": "Upload latest passbook or reconnect"
+    }
+   ]
+  }
+ },
+ "bank_accounts": [
+  {
+   "id": "ba_1",
+   "bank_name": "Demo Bank of India",
+   "account_type": "Savings",
+   "account_masked": "XXXXXX4821",
+   "ifsc_prefix": "DEMO0",
+   "available_balance": 284650.4,
+   "current_balance": 286150.4,
+   "last_synced_at": "2026-11-01T06:30:00+05:30",
+   "sync_status": "ok"
+  },
+  {
+   "id": "ba_2",
+   "bank_name": "Sample Co-operative Bank",
+   "account_type": "Savings",
+   "account_masked": "XXXXXX1093",
+   "ifsc_prefix": "SMPL0",
+   "available_balance": 92310.75,
+   "current_balance": 92310.75,
+   "last_synced_at": "2026-11-01T06:30:00+05:30",
+   "sync_status": "ok"
+  },
+  {
+   "id": "ba_3",
+   "bank_name": "Demo Bank of India",
+   "account_type": "Current",
+   "account_masked": "XXXXXX7764",
+   "ifsc_prefix": "DEMO0",
+   "available_balance": 41200.0,
+   "current_balance": 41200.0,
+   "last_synced_at": "2026-11-01T06:30:00+05:30",
+   "sync_status": "ok"
+  }
+ ],
+ "transactions": [
+  {
+   "id": "tx_290",
+   "account_id": "ba_3",
+   "date": "2026-11-11",
+   "description": "FREELANCE PAYMENT - SAMPLE CLIENT",
+   "amount": 56893.28,
+   "direction": "credit",
+   "category": "Freelance"
+  },
+  {
+   "id": "tx_289",
+   "account_id": "ba_2",
+   "date": "2026-11-05",
+   "description": "INTEREST CREDIT",
+   "amount": 396.76,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_288",
+   "account_id": "ba_1",
+   "date": "2026-11-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_269",
+   "account_id": "ba_1",
+   "date": "2026-10-27",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 5998.08,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_283",
+   "account_id": "ba_1",
+   "date": "2026-10-26",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 4089.14,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_284",
+   "account_id": "ba_1",
+   "date": "2026-10-24",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 963.09,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_287",
+   "account_id": "ba_1",
+   "date": "2026-10-24",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 5665.68,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_276",
+   "account_id": "ba_1",
+   "date": "2026-10-22",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 8323.1,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_273",
+   "account_id": "ba_2",
+   "date": "2026-10-20",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1608.3,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_286",
+   "account_id": "ba_2",
+   "date": "2026-10-19",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 667.55,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_270",
+   "account_id": "ba_1",
+   "date": "2026-10-16",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 1723.61,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_277",
+   "account_id": "ba_1",
+   "date": "2026-10-16",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2655.61,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_272",
+   "account_id": "ba_1",
+   "date": "2026-10-15",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1867.51,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_274",
+   "account_id": "ba_1",
+   "date": "2026-10-13",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 2377.97,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_271",
+   "account_id": "ba_1",
+   "date": "2026-10-11",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 2843.5,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_280",
+   "account_id": "ba_1",
+   "date": "2026-10-10",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2169.49,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_278",
+   "account_id": "ba_1",
+   "date": "2026-10-07",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 5036.44,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_275",
+   "account_id": "ba_2",
+   "date": "2026-10-06",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_281",
+   "account_id": "ba_1",
+   "date": "2026-10-06",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 2439.36,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_285",
+   "account_id": "ba_1",
+   "date": "2026-10-06",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 288.63,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_268",
+   "account_id": "ba_2",
+   "date": "2026-10-05",
+   "description": "INTEREST CREDIT",
+   "amount": 400.9,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_282",
+   "account_id": "ba_2",
+   "date": "2026-10-05",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 1073.34,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_279",
+   "account_id": "ba_1",
+   "date": "2026-10-03",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 3613.5,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_267",
+   "account_id": "ba_1",
+   "date": "2026-10-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_240",
+   "account_id": "ba_2",
+   "date": "2026-09-28",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 1680.3,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_255",
+   "account_id": "ba_1",
+   "date": "2026-09-26",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2853.97,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_256",
+   "account_id": "ba_2",
+   "date": "2026-09-26",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 7666.2,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_244",
+   "account_id": "ba_2",
+   "date": "2026-09-23",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1079.61,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_252",
+   "account_id": "ba_1",
+   "date": "2026-09-23",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_262",
+   "account_id": "ba_2",
+   "date": "2026-09-22",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 685.11,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_265",
+   "account_id": "ba_2",
+   "date": "2026-09-22",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1497.55,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_250",
+   "account_id": "ba_2",
+   "date": "2026-09-21",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1424.92,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_245",
+   "account_id": "ba_2",
+   "date": "2026-09-16",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 2123.46,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_254",
+   "account_id": "ba_1",
+   "date": "2026-09-16",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 4499.05,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_257",
+   "account_id": "ba_2",
+   "date": "2026-09-16",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2947.35,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_259",
+   "account_id": "ba_1",
+   "date": "2026-09-16",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2754.11,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_242",
+   "account_id": "ba_2",
+   "date": "2026-09-15",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4153.54,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_247",
+   "account_id": "ba_1",
+   "date": "2026-09-14",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1340.0,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_248",
+   "account_id": "ba_1",
+   "date": "2026-09-13",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3369.98,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_243",
+   "account_id": "ba_1",
+   "date": "2026-09-12",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 1532.2,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_241",
+   "account_id": "ba_1",
+   "date": "2026-09-11",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 3377.63,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_258",
+   "account_id": "ba_2",
+   "date": "2026-09-11",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 11533.38,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_253",
+   "account_id": "ba_1",
+   "date": "2026-09-10",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 1013.36,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_249",
+   "account_id": "ba_2",
+   "date": "2026-09-08",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2495.91,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_263",
+   "account_id": "ba_1",
+   "date": "2026-09-08",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 638.8,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_264",
+   "account_id": "ba_1",
+   "date": "2026-09-07",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 547.17,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_239",
+   "account_id": "ba_2",
+   "date": "2026-09-05",
+   "description": "INTEREST CREDIT",
+   "amount": 408.65,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_260",
+   "account_id": "ba_1",
+   "date": "2026-09-05",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 8205.62,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_261",
+   "account_id": "ba_1",
+   "date": "2026-09-05",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 767.1,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_266",
+   "account_id": "ba_1",
+   "date": "2026-09-03",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 3893.07,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_246",
+   "account_id": "ba_2",
+   "date": "2026-09-02",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 2064.8,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_251",
+   "account_id": "ba_1",
+   "date": "2026-09-02",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 2002.0,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_238",
+   "account_id": "ba_1",
+   "date": "2026-09-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_219",
+   "account_id": "ba_1",
+   "date": "2026-08-27",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2201.34,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_222",
+   "account_id": "ba_1",
+   "date": "2026-08-25",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_229",
+   "account_id": "ba_1",
+   "date": "2026-08-25",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 7803.51,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_218",
+   "account_id": "ba_1",
+   "date": "2026-08-24",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2131.25,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_220",
+   "account_id": "ba_1",
+   "date": "2026-08-22",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3100.2,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_223",
+   "account_id": "ba_2",
+   "date": "2026-08-18",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 5871.33,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_227",
+   "account_id": "ba_2",
+   "date": "2026-08-18",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 7037.99,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_237",
+   "account_id": "ba_2",
+   "date": "2026-08-18",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 2664.05,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_224",
+   "account_id": "ba_2",
+   "date": "2026-08-16",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 5593.8,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_231",
+   "account_id": "ba_1",
+   "date": "2026-08-15",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 1390.84,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_217",
+   "account_id": "ba_1",
+   "date": "2026-08-12",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1387.07,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_215",
+   "account_id": "ba_3",
+   "date": "2026-08-11",
+   "description": "FREELANCE PAYMENT - SAMPLE CLIENT",
+   "amount": 34482.28,
+   "direction": "credit",
+   "category": "Freelance"
+  },
+  {
+   "id": "tx_230",
+   "account_id": "ba_1",
+   "date": "2026-08-11",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 10102.74,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_225",
+   "account_id": "ba_1",
+   "date": "2026-08-09",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 5693.86,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_228",
+   "account_id": "ba_1",
+   "date": "2026-08-09",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 4717.95,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_216",
+   "account_id": "ba_1",
+   "date": "2026-08-08",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 5160.61,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_233",
+   "account_id": "ba_1",
+   "date": "2026-08-07",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 786.3,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_236",
+   "account_id": "ba_1",
+   "date": "2026-08-07",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 414.33,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_226",
+   "account_id": "ba_2",
+   "date": "2026-08-06",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2635.37,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_235",
+   "account_id": "ba_2",
+   "date": "2026-08-06",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 694.65,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_214",
+   "account_id": "ba_2",
+   "date": "2026-08-05",
+   "description": "INTEREST CREDIT",
+   "amount": 571.54,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_221",
+   "account_id": "ba_2",
+   "date": "2026-08-04",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 2854.52,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_232",
+   "account_id": "ba_1",
+   "date": "2026-08-03",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3060.42,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_234",
+   "account_id": "ba_1",
+   "date": "2026-08-03",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 846.98,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_213",
+   "account_id": "ba_1",
+   "date": "2026-08-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_185",
+   "account_id": "ba_1",
+   "date": "2026-07-26",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 2924.6,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_199",
+   "account_id": "ba_2",
+   "date": "2026-07-26",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 4581.46,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_192",
+   "account_id": "ba_2",
+   "date": "2026-07-25",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3040.21,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_198",
+   "account_id": "ba_1",
+   "date": "2026-07-25",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2019.64,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_211",
+   "account_id": "ba_2",
+   "date": "2026-07-24",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 426.21,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_191",
+   "account_id": "ba_2",
+   "date": "2026-07-23",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2183.47,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_200",
+   "account_id": "ba_1",
+   "date": "2026-07-23",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 5089.3,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_187",
+   "account_id": "ba_1",
+   "date": "2026-07-22",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 2724.49,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_196",
+   "account_id": "ba_1",
+   "date": "2026-07-22",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_193",
+   "account_id": "ba_1",
+   "date": "2026-07-21",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3110.32,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_205",
+   "account_id": "ba_2",
+   "date": "2026-07-21",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 2484.33,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_207",
+   "account_id": "ba_2",
+   "date": "2026-07-21",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 918.4,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_208",
+   "account_id": "ba_2",
+   "date": "2026-07-20",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1056.32,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_195",
+   "account_id": "ba_1",
+   "date": "2026-07-19",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 4333.62,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_197",
+   "account_id": "ba_1",
+   "date": "2026-07-18",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 4436.54,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_201",
+   "account_id": "ba_1",
+   "date": "2026-07-17",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 8181.18,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_190",
+   "account_id": "ba_1",
+   "date": "2026-07-14",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 2230.25,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_206",
+   "account_id": "ba_1",
+   "date": "2026-07-14",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 2558.71,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_210",
+   "account_id": "ba_1",
+   "date": "2026-07-14",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 903.63,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_186",
+   "account_id": "ba_1",
+   "date": "2026-07-13",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4948.6,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_204",
+   "account_id": "ba_1",
+   "date": "2026-07-10",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 8625.56,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_209",
+   "account_id": "ba_1",
+   "date": "2026-07-09",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 406.34,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_194",
+   "account_id": "ba_2",
+   "date": "2026-07-08",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2663.78,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_202",
+   "account_id": "ba_2",
+   "date": "2026-07-08",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 6736.34,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_188",
+   "account_id": "ba_2",
+   "date": "2026-07-07",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1838.77,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_184",
+   "account_id": "ba_2",
+   "date": "2026-07-05",
+   "description": "INTEREST CREDIT",
+   "amount": 777.29,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_212",
+   "account_id": "ba_1",
+   "date": "2026-07-05",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 2742.65,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_189",
+   "account_id": "ba_1",
+   "date": "2026-07-03",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1403.57,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_203",
+   "account_id": "ba_1",
+   "date": "2026-07-03",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 11867.98,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_183",
+   "account_id": "ba_1",
+   "date": "2026-07-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_167",
+   "account_id": "ba_1",
+   "date": "2026-06-28",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2473.01,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_179",
+   "account_id": "ba_2",
+   "date": "2026-06-28",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 229.16,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_168",
+   "account_id": "ba_2",
+   "date": "2026-06-26",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2235.12,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_162",
+   "account_id": "ba_1",
+   "date": "2026-06-21",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 5868.66,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_176",
+   "account_id": "ba_1",
+   "date": "2026-06-21",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 1206.09,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_161",
+   "account_id": "ba_2",
+   "date": "2026-06-16",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 1579.29,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_174",
+   "account_id": "ba_2",
+   "date": "2026-06-16",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 14766.49,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_177",
+   "account_id": "ba_1",
+   "date": "2026-06-14",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 4681.95,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_164",
+   "account_id": "ba_2",
+   "date": "2026-06-13",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 2574.03,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_181",
+   "account_id": "ba_1",
+   "date": "2026-06-13",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 327.28,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_182",
+   "account_id": "ba_2",
+   "date": "2026-06-13",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 5753.78,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_169",
+   "account_id": "ba_1",
+   "date": "2026-06-11",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 4003.23,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_165",
+   "account_id": "ba_1",
+   "date": "2026-06-10",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1455.68,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_166",
+   "account_id": "ba_1",
+   "date": "2026-06-08",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1410.97,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_180",
+   "account_id": "ba_1",
+   "date": "2026-06-08",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 273.55,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_163",
+   "account_id": "ba_1",
+   "date": "2026-06-07",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4740.77,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_178",
+   "account_id": "ba_1",
+   "date": "2026-06-06",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 886.43,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_160",
+   "account_id": "ba_2",
+   "date": "2026-06-05",
+   "description": "INTEREST CREDIT",
+   "amount": 519.15,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_170",
+   "account_id": "ba_1",
+   "date": "2026-06-04",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_171",
+   "account_id": "ba_2",
+   "date": "2026-06-03",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 7559.7,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_173",
+   "account_id": "ba_2",
+   "date": "2026-06-03",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 10957.21,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_172",
+   "account_id": "ba_1",
+   "date": "2026-06-02",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 3660.42,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_175",
+   "account_id": "ba_1",
+   "date": "2026-06-02",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 7354.34,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_159",
+   "account_id": "ba_1",
+   "date": "2026-06-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_155",
+   "account_id": "ba_1",
+   "date": "2026-05-28",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3053.78,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_145",
+   "account_id": "ba_2",
+   "date": "2026-05-22",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 4049.91,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_151",
+   "account_id": "ba_1",
+   "date": "2026-05-20",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2041.98,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_140",
+   "account_id": "ba_2",
+   "date": "2026-05-18",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1534.66,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_154",
+   "account_id": "ba_1",
+   "date": "2026-05-18",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3055.82,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_147",
+   "account_id": "ba_1",
+   "date": "2026-05-17",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 5080.71,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_146",
+   "account_id": "ba_2",
+   "date": "2026-05-16",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_153",
+   "account_id": "ba_2",
+   "date": "2026-05-16",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 11041.08,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_142",
+   "account_id": "ba_1",
+   "date": "2026-05-15",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 542.15,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_158",
+   "account_id": "ba_2",
+   "date": "2026-05-14",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 6448.23,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_141",
+   "account_id": "ba_1",
+   "date": "2026-05-13",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1545.18,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_149",
+   "account_id": "ba_1",
+   "date": "2026-05-13",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2294.91,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_148",
+   "account_id": "ba_2",
+   "date": "2026-05-12",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 7032.42,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_152",
+   "account_id": "ba_2",
+   "date": "2026-05-12",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2644.63,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_156",
+   "account_id": "ba_1",
+   "date": "2026-05-12",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 816.41,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_138",
+   "account_id": "ba_3",
+   "date": "2026-05-11",
+   "description": "FREELANCE PAYMENT - SAMPLE CLIENT",
+   "amount": 23040.62,
+   "direction": "credit",
+   "category": "Freelance"
+  },
+  {
+   "id": "tx_144",
+   "account_id": "ba_1",
+   "date": "2026-05-11",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2135.46,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_150",
+   "account_id": "ba_2",
+   "date": "2026-05-11",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 1970.31,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_143",
+   "account_id": "ba_1",
+   "date": "2026-05-06",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1850.78,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_137",
+   "account_id": "ba_2",
+   "date": "2026-05-05",
+   "description": "INTEREST CREDIT",
+   "amount": 644.01,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_139",
+   "account_id": "ba_1",
+   "date": "2026-05-04",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4492.16,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_157",
+   "account_id": "ba_1",
+   "date": "2026-05-04",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 792.27,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_136",
+   "account_id": "ba_1",
+   "date": "2026-05-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_119",
+   "account_id": "ba_1",
+   "date": "2026-04-28",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3363.06,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_117",
+   "account_id": "ba_1",
+   "date": "2026-04-25",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1654.42,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_115",
+   "account_id": "ba_1",
+   "date": "2026-04-23",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 3463.73,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_126",
+   "account_id": "ba_2",
+   "date": "2026-04-23",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 12349.04,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_120",
+   "account_id": "ba_1",
+   "date": "2026-04-21",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 859.94,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_130",
+   "account_id": "ba_1",
+   "date": "2026-04-21",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 560.97,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_133",
+   "account_id": "ba_1",
+   "date": "2026-04-21",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1493.53,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_124",
+   "account_id": "ba_1",
+   "date": "2026-04-20",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 5533.67,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_128",
+   "account_id": "ba_1",
+   "date": "2026-04-20",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 1796.97,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_129",
+   "account_id": "ba_1",
+   "date": "2026-04-20",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 2021.02,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_121",
+   "account_id": "ba_1",
+   "date": "2026-04-19",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_127",
+   "account_id": "ba_2",
+   "date": "2026-04-18",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 4412.56,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_114",
+   "account_id": "ba_2",
+   "date": "2026-04-17",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 2135.83,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_123",
+   "account_id": "ba_2",
+   "date": "2026-04-16",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 3965.0,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_135",
+   "account_id": "ba_1",
+   "date": "2026-04-13",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 3438.34,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_116",
+   "account_id": "ba_1",
+   "date": "2026-04-11",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 670.16,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_131",
+   "account_id": "ba_2",
+   "date": "2026-04-11",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3692.14,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_125",
+   "account_id": "ba_1",
+   "date": "2026-04-08",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 6705.75,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_113",
+   "account_id": "ba_1",
+   "date": "2026-04-07",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 2243.78,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_118",
+   "account_id": "ba_2",
+   "date": "2026-04-07",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1057.56,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_134",
+   "account_id": "ba_1",
+   "date": "2026-04-07",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1491.9,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_122",
+   "account_id": "ba_1",
+   "date": "2026-04-06",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 5689.0,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_112",
+   "account_id": "ba_2",
+   "date": "2026-04-05",
+   "description": "INTEREST CREDIT",
+   "amount": 361.63,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_132",
+   "account_id": "ba_2",
+   "date": "2026-04-03",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1395.52,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_111",
+   "account_id": "ba_1",
+   "date": "2026-04-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_86",
+   "account_id": "ba_1",
+   "date": "2026-03-28",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 2041.43,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_104",
+   "account_id": "ba_2",
+   "date": "2026-03-28",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3634.05,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_108",
+   "account_id": "ba_1",
+   "date": "2026-03-25",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 728.73,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_88",
+   "account_id": "ba_1",
+   "date": "2026-03-24",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2114.33,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_105",
+   "account_id": "ba_2",
+   "date": "2026-03-24",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 552.27,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_81",
+   "account_id": "ba_1",
+   "date": "2026-03-21",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4580.54,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_84",
+   "account_id": "ba_2",
+   "date": "2026-03-21",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4534.93,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_89",
+   "account_id": "ba_1",
+   "date": "2026-03-21",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1185.44,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_97",
+   "account_id": "ba_1",
+   "date": "2026-03-21",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 3584.94,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_106",
+   "account_id": "ba_1",
+   "date": "2026-03-21",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1487.33,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_87",
+   "account_id": "ba_1",
+   "date": "2026-03-20",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1416.18,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_90",
+   "account_id": "ba_2",
+   "date": "2026-03-20",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2790.66,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_100",
+   "account_id": "ba_2",
+   "date": "2026-03-20",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 4822.79,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_93",
+   "account_id": "ba_2",
+   "date": "2026-03-18",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_98",
+   "account_id": "ba_1",
+   "date": "2026-03-18",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2085.9,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_83",
+   "account_id": "ba_1",
+   "date": "2026-03-14",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4864.86,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_92",
+   "account_id": "ba_2",
+   "date": "2026-03-14",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 1516.26,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_96",
+   "account_id": "ba_1",
+   "date": "2026-03-12",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2996.81,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_107",
+   "account_id": "ba_1",
+   "date": "2026-03-12",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 960.94,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_85",
+   "account_id": "ba_2",
+   "date": "2026-03-11",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1891.99,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_102",
+   "account_id": "ba_1",
+   "date": "2026-03-11",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 4384.0,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_103",
+   "account_id": "ba_1",
+   "date": "2026-03-11",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 2818.99,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_91",
+   "account_id": "ba_2",
+   "date": "2026-03-10",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1702.67,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_94",
+   "account_id": "ba_1",
+   "date": "2026-03-09",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 4674.7,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_82",
+   "account_id": "ba_1",
+   "date": "2026-03-08",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4041.56,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_109",
+   "account_id": "ba_2",
+   "date": "2026-03-06",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1256.37,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_80",
+   "account_id": "ba_2",
+   "date": "2026-03-05",
+   "description": "INTEREST CREDIT",
+   "amount": 530.6,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_99",
+   "account_id": "ba_1",
+   "date": "2026-03-04",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 9474.47,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_95",
+   "account_id": "ba_1",
+   "date": "2026-03-03",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 1748.3,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_101",
+   "account_id": "ba_2",
+   "date": "2026-03-03",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 2558.02,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_110",
+   "account_id": "ba_1",
+   "date": "2026-03-02",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 6730.67,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_79",
+   "account_id": "ba_1",
+   "date": "2026-03-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_72",
+   "account_id": "ba_1",
+   "date": "2026-02-28",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 2617.85,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_63",
+   "account_id": "ba_1",
+   "date": "2026-02-27",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4848.45,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_69",
+   "account_id": "ba_1",
+   "date": "2026-02-24",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 7177.35,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_77",
+   "account_id": "ba_2",
+   "date": "2026-02-23",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 699.88,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_64",
+   "account_id": "ba_2",
+   "date": "2026-02-20",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 1975.21,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_76",
+   "account_id": "ba_1",
+   "date": "2026-02-19",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1378.28,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_65",
+   "account_id": "ba_1",
+   "date": "2026-02-16",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 664.21,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_67",
+   "account_id": "ba_2",
+   "date": "2026-02-16",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 1322.43,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_73",
+   "account_id": "ba_1",
+   "date": "2026-02-15",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 1125.84,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_75",
+   "account_id": "ba_1",
+   "date": "2026-02-12",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1107.1,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_62",
+   "account_id": "ba_3",
+   "date": "2026-02-11",
+   "description": "FREELANCE PAYMENT - SAMPLE CLIENT",
+   "amount": 26007.47,
+   "direction": "credit",
+   "category": "Freelance"
+  },
+  {
+   "id": "tx_68",
+   "account_id": "ba_2",
+   "date": "2026-02-11",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_71",
+   "account_id": "ba_1",
+   "date": "2026-02-10",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 405.53,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_61",
+   "account_id": "ba_2",
+   "date": "2026-02-05",
+   "description": "INTEREST CREDIT",
+   "amount": 610.72,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_66",
+   "account_id": "ba_1",
+   "date": "2026-02-05",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3213.23,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_70",
+   "account_id": "ba_2",
+   "date": "2026-02-04",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 5976.6,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_78",
+   "account_id": "ba_2",
+   "date": "2026-02-04",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 2012.0,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_74",
+   "account_id": "ba_2",
+   "date": "2026-02-02",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3242.91,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_60",
+   "account_id": "ba_1",
+   "date": "2026-02-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_54",
+   "account_id": "ba_1",
+   "date": "2026-01-25",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 3580.0,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_44",
+   "account_id": "ba_1",
+   "date": "2026-01-23",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 4430.39,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_49",
+   "account_id": "ba_1",
+   "date": "2026-01-22",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1864.78,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_56",
+   "account_id": "ba_1",
+   "date": "2026-01-20",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 7852.22,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_57",
+   "account_id": "ba_1",
+   "date": "2026-01-18",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3864.9,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_50",
+   "account_id": "ba_1",
+   "date": "2026-01-12",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 4198.85,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_45",
+   "account_id": "ba_1",
+   "date": "2026-01-11",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 743.49,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_52",
+   "account_id": "ba_1",
+   "date": "2026-01-10",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 8128.78,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_55",
+   "account_id": "ba_2",
+   "date": "2026-01-10",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 6718.61,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_59",
+   "account_id": "ba_1",
+   "date": "2026-01-06",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 6361.63,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_43",
+   "account_id": "ba_2",
+   "date": "2026-01-05",
+   "description": "INTEREST CREDIT",
+   "amount": 615.15,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_51",
+   "account_id": "ba_2",
+   "date": "2026-01-04",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_58",
+   "account_id": "ba_1",
+   "date": "2026-01-04",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 986.0,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_47",
+   "account_id": "ba_1",
+   "date": "2026-01-03",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2822.88,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_48",
+   "account_id": "ba_1",
+   "date": "2026-01-03",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1578.24,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_53",
+   "account_id": "ba_1",
+   "date": "2026-01-03",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2276.38,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_46",
+   "account_id": "ba_2",
+   "date": "2026-01-02",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2424.67,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_42",
+   "account_id": "ba_1",
+   "date": "2026-01-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_31",
+   "account_id": "ba_1",
+   "date": "2025-12-23",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1320.13,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_32",
+   "account_id": "ba_2",
+   "date": "2025-12-23",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 2375.13,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_37",
+   "account_id": "ba_1",
+   "date": "2025-12-21",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2344.84,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_26",
+   "account_id": "ba_1",
+   "date": "2025-12-20",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1036.73,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_28",
+   "account_id": "ba_1",
+   "date": "2025-12-20",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1494.33,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_38",
+   "account_id": "ba_2",
+   "date": "2025-12-18",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 6262.45,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_33",
+   "account_id": "ba_2",
+   "date": "2025-12-17",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_41",
+   "account_id": "ba_2",
+   "date": "2025-12-17",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 5339.0,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_39",
+   "account_id": "ba_1",
+   "date": "2025-12-15",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 1364.94,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_34",
+   "account_id": "ba_1",
+   "date": "2025-12-14",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 6041.1,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_35",
+   "account_id": "ba_2",
+   "date": "2025-12-14",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 1491.01,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_40",
+   "account_id": "ba_1",
+   "date": "2025-12-13",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 989.88,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_30",
+   "account_id": "ba_1",
+   "date": "2025-12-11",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1061.17,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_25",
+   "account_id": "ba_2",
+   "date": "2025-12-06",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 1633.66,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_29",
+   "account_id": "ba_1",
+   "date": "2025-12-06",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1453.59,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_24",
+   "account_id": "ba_2",
+   "date": "2025-12-05",
+   "description": "INTEREST CREDIT",
+   "amount": 742.93,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_36",
+   "account_id": "ba_2",
+   "date": "2025-12-03",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 8271.31,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_27",
+   "account_id": "ba_2",
+   "date": "2025-12-02",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1163.78,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_23",
+   "account_id": "ba_1",
+   "date": "2025-12-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  },
+  {
+   "id": "tx_10",
+   "account_id": "ba_1",
+   "date": "2025-11-26",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 2627.21,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_21",
+   "account_id": "ba_2",
+   "date": "2025-11-25",
+   "description": "ENTERTAINMENT - DEMO MERCHANT",
+   "amount": 1226.72,
+   "direction": "debit",
+   "category": "Entertainment"
+  },
+  {
+   "id": "tx_11",
+   "account_id": "ba_1",
+   "date": "2025-11-24",
+   "description": "UTILITIES - DEMO MERCHANT",
+   "amount": 4364.89,
+   "direction": "debit",
+   "category": "Utilities"
+  },
+  {
+   "id": "tx_13",
+   "account_id": "ba_2",
+   "date": "2025-11-21",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 730.63,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_7",
+   "account_id": "ba_1",
+   "date": "2025-11-17",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3491.55,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_20",
+   "account_id": "ba_1",
+   "date": "2025-11-17",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 3959.81,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_22",
+   "account_id": "ba_1",
+   "date": "2025-11-17",
+   "description": "EDUCATION - DEMO MERCHANT",
+   "amount": 4660.28,
+   "direction": "debit",
+   "category": "Education"
+  },
+  {
+   "id": "tx_12",
+   "account_id": "ba_1",
+   "date": "2025-11-15",
+   "description": "RENT - DEMO MERCHANT",
+   "amount": 32000.0,
+   "direction": "debit",
+   "category": "Rent"
+  },
+  {
+   "id": "tx_17",
+   "account_id": "ba_1",
+   "date": "2025-11-13",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 12293.55,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_14",
+   "account_id": "ba_1",
+   "date": "2025-11-12",
+   "description": "SHOPPING - DEMO MERCHANT",
+   "amount": 2026.61,
+   "direction": "debit",
+   "category": "Shopping"
+  },
+  {
+   "id": "tx_3",
+   "account_id": "ba_3",
+   "date": "2025-11-11",
+   "description": "FREELANCE PAYMENT - SAMPLE CLIENT",
+   "amount": 32261.18,
+   "direction": "credit",
+   "category": "Freelance"
+  },
+  {
+   "id": "tx_19",
+   "account_id": "ba_1",
+   "date": "2025-11-09",
+   "description": "HEALTH - DEMO MERCHANT",
+   "amount": 737.21,
+   "direction": "debit",
+   "category": "Health"
+  },
+  {
+   "id": "tx_4",
+   "account_id": "ba_2",
+   "date": "2025-11-08",
+   "description": "GROCERIES - DEMO MERCHANT",
+   "amount": 2152.09,
+   "direction": "debit",
+   "category": "Groceries"
+  },
+  {
+   "id": "tx_9",
+   "account_id": "ba_1",
+   "date": "2025-11-08",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 3198.29,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_18",
+   "account_id": "ba_1",
+   "date": "2025-11-08",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 10332.85,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_8",
+   "account_id": "ba_1",
+   "date": "2025-11-06",
+   "description": "FUEL - DEMO MERCHANT",
+   "amount": 1912.29,
+   "direction": "debit",
+   "category": "Fuel"
+  },
+  {
+   "id": "tx_2",
+   "account_id": "ba_2",
+   "date": "2025-11-05",
+   "description": "INTEREST CREDIT",
+   "amount": 851.89,
+   "direction": "credit",
+   "category": "Interest"
+  },
+  {
+   "id": "tx_6",
+   "account_id": "ba_1",
+   "date": "2025-11-05",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 1357.29,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_15",
+   "account_id": "ba_1",
+   "date": "2025-11-05",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 7036.74,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_16",
+   "account_id": "ba_1",
+   "date": "2025-11-05",
+   "description": "TRAVEL - DEMO MERCHANT",
+   "amount": 3644.71,
+   "direction": "debit",
+   "category": "Travel"
+  },
+  {
+   "id": "tx_5",
+   "account_id": "ba_1",
+   "date": "2025-11-04",
+   "description": "DINING - DEMO MERCHANT",
+   "amount": 537.81,
+   "direction": "debit",
+   "category": "Dining"
+  },
+  {
+   "id": "tx_1",
+   "account_id": "ba_1",
+   "date": "2025-11-01",
+   "description": "SALARY CREDIT - DEMO EMPLOYER PVT LTD",
+   "amount": 185000.0,
+   "direction": "credit",
+   "category": "Salary"
+  }
+ ],
+ "demat": {
+  "accounts": [
+   {
+    "id": "dm_1",
+    "depository": "NSDL",
+    "dp_name": "Demo Securities Ltd",
+    "bo_masked": "IN30XXXXXXXX5521"
+   },
+   {
+    "id": "dm_2",
+    "depository": "CDSL",
+    "dp_name": "Sample Broking Ltd",
+    "bo_masked": "1208XXXXXXXX0934"
+   }
+  ],
+  "holdings": [
+   {
+    "symbol": "DEMOINFRA",
+    "name": "Demo Infra Ltd",
+    "exchange": "NSE",
+    "quantity": 120,
+    "avg_price": 1420.0,
+    "ltp": 1688.35,
+    "invested": 170400.0,
+    "market_value": 202602.0,
+    "pnl": 32202.0,
+    "pnl_pct": 18.9,
+    "day_change_pct": -0.46
+   },
+   {
+    "symbol": "SAMPLEBANK",
+    "name": "Sample Bank Ltd",
+    "exchange": "NSE",
+    "quantity": 300,
+    "avg_price": 612.5,
+    "ltp": 744.1,
+    "invested": 183750.0,
+    "market_value": 223230.0,
+    "pnl": 39480.0,
+    "pnl_pct": 21.49,
+    "day_change_pct": 0.48
+   },
+   {
+    "symbol": "TESTPHARMA",
+    "name": "Test Pharma Ltd",
+    "exchange": "NSE",
+    "quantity": 45,
+    "avg_price": 3890.0,
+    "ltp": 3512.6,
+    "invested": 175050.0,
+    "market_value": 158067.0,
+    "pnl": -16983.0,
+    "pnl_pct": -9.7,
+    "day_change_pct": 1.57
+   },
+   {
+    "symbol": "MOCKTECH",
+    "name": "Mock Technologies Ltd",
+    "exchange": "NSE",
+    "quantity": 80,
+    "avg_price": 1510.0,
+    "ltp": 1912.45,
+    "invested": 120800.0,
+    "market_value": 152996.0,
+    "pnl": 32196.0,
+    "pnl_pct": 26.65,
+    "day_change_pct": 1.68
+   },
+   {
+    "symbol": "ALPHAFMCG",
+    "name": "Alpha FMCG Ltd",
+    "exchange": "NSE",
+    "quantity": 60,
+    "avg_price": 2420.0,
+    "ltp": 2601.0,
+    "invested": 145200.0,
+    "market_value": 156060.0,
+    "pnl": 10860.0,
+    "pnl_pct": 7.48,
+    "day_change_pct": 0.53
+   },
+   {
+    "symbol": "BETAPOWER",
+    "name": "Beta Power Ltd",
+    "exchange": "NSE",
+    "quantity": 500,
+    "avg_price": 210.4,
+    "ltp": 198.75,
+    "invested": 105200.0,
+    "market_value": 99375.0,
+    "pnl": -5825.0,
+    "pnl_pct": -5.54,
+    "day_change_pct": 1.17
+   }
+  ],
+  "totals": {
+   "invested": 900400.0,
+   "market_value": 992330.0,
+   "pnl": 91930.0,
+   "pnl_pct": 10.21
+  }
+ },
+ "mutual_funds": {
+  "holdings": [
+   {
+    "scheme_code": "100001",
+    "scheme_name": "UTI Nifty 50 Index Fund - Direct Growth",
+    "amc": "UTI Mutual Fund",
+    "category": "Equity: Index",
+    "folio_masked": "XXXX2208",
+    "units": 5927.866,
+    "nav": 75.46,
+    "nav_date": "2026-10-31",
+    "invested": 360000,
+    "current_value": 447342.69,
+    "absolute_return_pct": 24.26,
+    "xirr_pct": 14.7
+   },
+   {
+    "scheme_code": "100002",
+    "scheme_name": "UTI Flexi Cap Fund - Direct Growth",
+    "amc": "UTI Mutual Fund",
+    "category": "Equity: Flexi Cap",
+    "folio_masked": "XXXX3883",
+    "units": 3817.654,
+    "nav": 71.51,
+    "nav_date": "2026-10-31",
+    "invested": 225000,
+    "current_value": 273012.16,
+    "absolute_return_pct": 21.34,
+    "xirr_pct": 15.77
+   },
+   {
+    "scheme_code": "100003",
+    "scheme_name": "Sample Midcap Fund - Direct Growth",
+    "amc": "Sample AMC",
+    "category": "Equity: Mid Cap",
+    "folio_masked": "XXXX1572",
+    "units": 2031.47,
+    "nav": 71.48,
+    "nav_date": "2026-10-31",
+    "invested": 120000,
+    "current_value": 145199.62,
+    "absolute_return_pct": 21.0,
+    "xirr_pct": 19.66
+   },
+   {
+    "scheme_code": "100004",
+    "scheme_name": "Demo Short Duration Fund - Direct Growth",
+    "amc": "Demo AMC",
+    "category": "Debt: Short Duration",
+    "folio_masked": "XXXX3346",
+    "units": 1707.42,
+    "nav": 55.49,
+    "nav_date": "2026-10-31",
+    "invested": 90000,
+    "current_value": 94737.04,
+    "absolute_return_pct": 5.26,
+    "xirr_pct": 6.72
+   }
+  ],
+  "totals": {
+   "invested": 795000,
+   "current_value": 960291.51,
+   "absolute_return_pct": 20.79,
+   "xirr_pct": 15.07
+  },
+  "source_note": "Demo values. Real data comes from CAS / Account Aggregator feeds."
+ },
+ "sips": [
+  {
+   "id": "sip_100001",
+   "scheme_name": "UTI Nifty 50 Index Fund - Direct Growth",
+   "amc": "UTI Mutual Fund",
+   "amount": 10000,
+   "frequency": "Monthly",
+   "sip_day": 5,
+   "next_date": "2026-11-05",
+   "installments_done": 36,
+   "start_date": "2023-11-05",
+   "status": "Active"
+  },
+  {
+   "id": "sip_100002",
+   "scheme_name": "UTI Flexi Cap Fund - Direct Growth",
+   "amc": "UTI Mutual Fund",
+   "amount": 7500,
+   "frequency": "Monthly",
+   "sip_day": 5,
+   "next_date": "2026-11-05",
+   "installments_done": 30,
+   "start_date": "2024-05-05",
+   "status": "Active"
+  },
+  {
+   "id": "sip_100003",
+   "scheme_name": "Sample Midcap Fund - Direct Growth",
+   "amc": "Sample AMC",
+   "amount": 5000,
+   "frequency": "Monthly",
+   "sip_day": 5,
+   "next_date": "2026-11-05",
+   "installments_done": 24,
+   "start_date": "2024-11-05",
+   "status": "Active"
+  },
+  {
+   "id": "sip_100004",
+   "scheme_name": "Demo Short Duration Fund - Direct Growth",
+   "amc": "Demo AMC",
+   "amount": 5000,
+   "frequency": "Monthly",
+   "sip_day": 5,
+   "next_date": "2026-11-05",
+   "installments_done": 18,
+   "start_date": "2025-05-05",
+   "status": "Active"
+  }
+ ],
+ "performance": [
+  {
+   "date": "2024-11-01",
+   "invested": 922900.0,
+   "value": 787405.24
+  },
+  {
+   "date": "2024-12-01",
+   "invested": 945400.0,
+   "value": 820806.55
+  },
+  {
+   "date": "2025-01-01",
+   "invested": 967900.0,
+   "value": 853786.29
+  },
+  {
+   "date": "2025-02-01",
+   "invested": 990400.0,
+   "value": 883586.99
+  },
+  {
+   "date": "2025-03-01",
+   "invested": 1012900.0,
+   "value": 916208.63
+  },
+  {
+   "date": "2025-04-01",
+   "invested": 1035400.0,
+   "value": 951138.82
+  },
+  {
+   "date": "2025-05-01",
+   "invested": 1062900.0,
+   "value": 988266.69
+  },
+  {
+   "date": "2025-06-01",
+   "invested": 1090400.0,
+   "value": 1029648.51
+  },
+  {
+   "date": "2025-07-01",
+   "invested": 1117900.0,
+   "value": 1068649.99
+  },
+  {
+   "date": "2025-08-01",
+   "invested": 1145400.0,
+   "value": 1106430.3
+  },
+  {
+   "date": "2025-09-01",
+   "invested": 1172900.0,
+   "value": 1154513.08
+  },
+  {
+   "date": "2025-10-01",
+   "invested": 1200400.0,
+   "value": 1193370.96
+  },
+  {
+   "date": "2025-11-01",
+   "invested": 1227900.0,
+   "value": 1228032.85
+  },
+  {
+   "date": "2025-12-01",
+   "invested": 1255400.0,
+   "value": 1271871.37
+  },
+  {
+   "date": "2026-01-01",
+   "invested": 1282900.0,
+   "value": 1310156.77
+  },
+  {
+   "date": "2026-02-01",
+   "invested": 1310400.0,
+   "value": 1364554.2
+  },
+  {
+   "date": "2026-03-01",
+   "invested": 1337900.0,
+   "value": 1400596.68
+  },
+  {
+   "date": "2026-04-01",
+   "invested": 1365400.0,
+   "value": 1444317.78
+  },
+  {
+   "date": "2026-05-01",
+   "invested": 1392900.0,
+   "value": 1482521.87
+  },
+  {
+   "date": "2026-06-01",
+   "invested": 1420400.0,
+   "value": 1536508.0
+  },
+  {
+   "date": "2026-07-01",
+   "invested": 1447900.0,
+   "value": 1581692.61
+  },
+  {
+   "date": "2026-08-01",
+   "invested": 1475400.0,
+   "value": 1612774.88
+  },
+  {
+   "date": "2026-09-01",
+   "invested": 1502900.0,
+   "value": 1651091.65
+  },
+  {
+   "date": "2026-10-01",
+   "invested": 1530400.0,
+   "value": 1717783.23
+  },
+  {
+   "date": "2026-11-01",
+   "invested": 1530400.0,
+   "value": 1952621.51
+  }
+ ],
+ "savings": {
+  "deposits": [
+   {
+    "id": "fd_1",
+    "type": "FD",
+    "bank": "Demo Bank of India",
+    "account_masked": "XXXX2201",
+    "principal": 300000.0,
+    "rate_pct": 7.1,
+    "start_date": "2025-03-15",
+    "maturity_date": "2027-03-15",
+    "maturity_amount": 344886.0,
+    "payout": "Cumulative",
+    "days_to_maturity": 134
+   },
+   {
+    "id": "fd_2",
+    "type": "FD",
+    "bank": "Sample Co-operative Bank",
+    "account_masked": "XXXX8810",
+    "principal": 150000.0,
+    "rate_pct": 7.4,
+    "start_date": "2024-12-01",
+    "maturity_date": "2026-12-01",
+    "maturity_amount": 173570.0,
+    "payout": "Cumulative",
+    "days_to_maturity": 30
+   },
+   {
+    "id": "rd_1",
+    "type": "RD",
+    "bank": "Demo Bank of India",
+    "account_masked": "XXXX3402",
+    "principal": 90000.0,
+    "monthly_installment": 5000.0,
+    "rate_pct": 6.8,
+    "start_date": "2025-05-10",
+    "maturity_date": "2027-05-10",
+    "maturity_amount": 128240.0,
+    "payout": "On maturity",
+    "days_to_maturity": 190
+   }
+  ],
+  "retirement": {
+   "ppf": {
+    "balance": 642300.0,
+    "account_masked": "XXXX5120",
+    "opened_on": "2016-04-10",
+    "maturity_date": "2032-03-31",
+    "fy_contribution": 90000.0,
+    "fy_limit": 150000.0,
+    "rate_pct": 7.1
+   },
+   "epf": {
+    "balance": 1184500.0,
+    "uan_masked": "XXXXXXXX6623",
+    "employee_share": 702100.0,
+    "employer_share": 482400.0,
+    "rate_pct": 8.25,
+    "last_contribution": "2026-10-15"
+   },
+   "nps": {
+    "balance": 438900.0,
+    "pran_masked": "XXXXXXXX1187",
+    "tier1": 412400.0,
+    "tier2": 26500.0,
+    "scheme_mix": [
+     {
+      "asset": "Equity (E)",
+      "pct": 75
+     },
+     {
+      "asset": "Corporate debt (C)",
+      "pct": 15
+     },
+     {
+      "asset": "Govt securities (G)",
+      "pct": 10
+     }
+    ]
+   }
+  },
+  "totals": {
+   "deposits": 540000.0,
+   "retirement": 2265700.0
+  }
+ },
+ "insurance": [
+  {
+   "id": "in_1",
+   "type": "life",
+   "insurer": "Demo Life Insurance Co",
+   "plan": "Term Plan 1 Cr",
+   "policy_masked": "XXXXXX4410",
+   "sum_assured": 10000000.0,
+   "premium": 14820.0,
+   "frequency": "Yearly",
+   "renewal_date": "2027-01-18",
+   "status": "Active",
+   "insured": "Self",
+   "days_to_renewal": 78
+  },
+  {
+   "id": "in_2",
+   "type": "health",
+   "insurer": "Sample Health Insurance Ltd",
+   "plan": "Family Floater",
+   "policy_masked": "XXXXXX9015",
+   "sum_assured": 1000000.0,
+   "premium": 28640.0,
+   "frequency": "Yearly",
+   "renewal_date": "2026-11-24",
+   "status": "Renewal due",
+   "insured": "Self, spouse, 1 child",
+   "days_to_renewal": 23
+  },
+  {
+   "id": "in_3",
+   "type": "motor",
+   "insurer": "Test General Insurance Ltd",
+   "plan": "Comprehensive - Car",
+   "policy_masked": "XXXXXX2271",
+   "sum_assured": 640000.0,
+   "premium": 11250.0,
+   "frequency": "Yearly",
+   "renewal_date": "2027-06-02",
+   "status": "Active",
+   "insured": "Vehicle XX-00-XX-0000",
+   "days_to_renewal": 213
+  }
+ ],
+ "liabilities": {
+  "loans": [
+   {
+    "id": "ln_1",
+    "lender": "Demo Bank of India",
+    "type": "Home loan",
+    "account_masked": "XXXX7781",
+    "principal": 4500000.0,
+    "outstanding": 3612400.0,
+    "emi": 38950.0,
+    "interest_rate_pct": 8.45,
+    "next_emi_date": "2026-11-07",
+    "tenure_left_months": 158
+   },
+   {
+    "id": "ln_2",
+    "lender": "Sample Finance Ltd",
+    "type": "Car loan",
+    "account_masked": "XXXX0552",
+    "principal": 650000.0,
+    "outstanding": 284300.0,
+    "emi": 13480.0,
+    "interest_rate_pct": 9.2,
+    "next_emi_date": "2026-11-10",
+    "tenure_left_months": 23
+   }
+  ],
+  "cards": [
+   {
+    "id": "cc_1",
+    "issuer": "Demo Bank of India",
+    "card_name": "Demo Platinum",
+    "last4": "4021",
+    "credit_limit": 300000.0,
+    "outstanding": 46210.0,
+    "min_due": 2310.0,
+    "due_date": "2026-11-18",
+    "statement_date": "2026-10-28"
+   },
+   {
+    "id": "cc_2",
+    "issuer": "Sample Card Services",
+    "card_name": "Sample Rewards",
+    "last4": "8834",
+    "credit_limit": 150000.0,
+    "outstanding": 18950.0,
+    "min_due": 950.0,
+    "due_date": "2026-11-12",
+    "statement_date": "2026-10-22"
+   }
+  ],
+  "totals": {
+   "loan_outstanding": 3896700.0,
+   "card_outstanding": 65160.0,
+   "total": 3961860.0,
+   "monthly_emi": 52430.0,
+   "credit_limit": 450000.0,
+   "utilisation_pct": 14.48
+  }
+ },
+ "institutions": [
+  {
+   "id": "fi_1",
+   "name": "Demo Bank of India",
+   "type": "Bank",
+   "linked_via": "Account Aggregator",
+   "status": "Connected",
+   "last_synced_at": "2026-11-01T06:30:00+05:30"
+  },
+  {
+   "id": "fi_2",
+   "name": "Sample Co-operative Bank",
+   "type": "Bank",
+   "linked_via": "Account Aggregator",
+   "status": "Connected",
+   "last_synced_at": "2026-11-01T06:30:00+05:30"
+  },
+  {
+   "id": "fi_3",
+   "name": "NSDL / CDSL (demat)",
+   "type": "Depository",
+   "linked_via": "Account Aggregator",
+   "status": "Connected",
+   "last_synced_at": "2026-11-01T06:31:00+05:30"
+  },
+  {
+   "id": "fi_4",
+   "name": "UTI Mutual Fund + other AMCs",
+   "type": "Mutual funds",
+   "linked_via": "CAS statement",
+   "status": "Connected",
+   "last_synced_at": "2026-11-01T06:32:00+05:30"
+  },
+  {
+   "id": "fi_5",
+   "name": "EPFO",
+   "type": "Retirement",
+   "linked_via": "Manual",
+   "status": "Needs attention",
+   "last_synced_at": "2026-10-15T09:00:00+05:30"
+  }
+ ],
+ "consents": [
+  {
+   "id": "cn_1",
+   "aa_handle": "user@demo-aa",
+   "aa_name": "Demo AA Pvt Ltd (sandbox)",
+   "fip_names": [
+    "Demo Bank of India",
+    "Sample Co-operative Bank"
+   ],
+   "fi_types": [
+    "DEPOSIT",
+    "TERM_DEPOSIT",
+    "RECURRING_DEPOSIT"
+   ],
+   "purpose": "Personal finance management",
+   "status": "ACTIVE",
+   "created_at": "2025-11-02",
+   "valid_till": "2027-11-01",
+   "fetch_frequency": "1 per day",
+   "data_range_months": 12
+  },
+  {
+   "id": "cn_2",
+   "aa_handle": "user@demo-aa",
+   "aa_name": "Demo AA Pvt Ltd (sandbox)",
+   "fip_names": [
+    "NSDL / CDSL (demat)"
+   ],
+   "fi_types": [
+    "EQUITIES"
+   ],
+   "purpose": "Personal finance management",
+   "status": "ACTIVE",
+   "created_at": "2026-01-14",
+   "valid_till": "2027-01-13",
+   "fetch_frequency": "1 per day",
+   "data_range_months": 12
+  },
+  {
+   "id": "cn_3",
+   "aa_handle": "user@demo-aa",
+   "aa_name": "Demo AA Pvt Ltd (sandbox)",
+   "fip_names": [
+    "Sample Insurance Repository"
+   ],
+   "fi_types": [
+    "INSURANCE_POLICIES"
+   ],
+   "purpose": "Personal finance management",
+   "status": "PAUSED",
+   "created_at": "2026-03-02",
+   "valid_till": "2027-03-01",
+   "fetch_frequency": "1 per week",
+   "data_range_months": 24
+  }
+ ],
+ "net_worth_history": [
+  {
+   "month": "2024-11",
+   "net_worth": 860553.67,
+   "assets": 4058362.41,
+   "liabilities": 4532367.84
+  },
+  {
+   "month": "2024-12",
+   "net_worth": 882179.41,
+   "assets": 4104950.75,
+   "liabilities": 4508596.68
+  },
+  {
+   "month": "2025-01",
+   "net_worth": 897893.92,
+   "assets": 4151539.09,
+   "liabilities": 4484825.52
+  },
+  {
+   "month": "2025-02",
+   "net_worth": 902320.66,
+   "assets": 4198127.44,
+   "liabilities": 4461054.36
+  },
+  {
+   "month": "2025-03",
+   "net_worth": 921818.5,
+   "assets": 4244715.78,
+   "liabilities": 4437283.2
+  },
+  {
+   "month": "2025-04",
+   "net_worth": 930908.49,
+   "assets": 4291304.13,
+   "liabilities": 4413512.04
+  },
+  {
+   "month": "2025-05",
+   "net_worth": 946332.28,
+   "assets": 4337892.47,
+   "liabilities": 4389740.88
+  },
+  {
+   "month": "2025-06",
+   "net_worth": 974079.96,
+   "assets": 4384480.81,
+   "liabilities": 4365969.72
+  },
+  {
+   "month": "2025-07",
+   "net_worth": 984831.29,
+   "assets": 4431069.16,
+   "liabilities": 4342198.56
+  },
+  {
+   "month": "2025-08",
+   "net_worth": 986767.63,
+   "assets": 4477657.5,
+   "liabilities": 4318427.4
+  },
+  {
+   "month": "2025-09",
+   "net_worth": 1010204.96,
+   "assets": 4524245.84,
+   "liabilities": 4294656.24
+  },
+  {
+   "month": "2025-10",
+   "net_worth": 1015915.92,
+   "assets": 4570834.19,
+   "liabilities": 4270885.08
+  },
+  {
+   "month": "2025-11",
+   "net_worth": 1038271.51,
+   "assets": 4617422.53,
+   "liabilities": 4247113.92
+  },
+  {
+   "month": "2025-12",
+   "net_worth": 1047619.98,
+   "assets": 4664010.88,
+   "liabilities": 4223342.76
+  },
+  {
+   "month": "2026-01",
+   "net_worth": 1065219.34,
+   "assets": 4710599.22,
+   "liabilities": 4199571.6
+  },
+  {
+   "month": "2026-02",
+   "net_worth": 1090799.58,
+   "assets": 4757187.56,
+   "liabilities": 4175800.44
+  },
+  {
+   "month": "2026-03",
+   "net_worth": 1102910.32,
+   "assets": 4803775.91,
+   "liabilities": 4152029.28
+  },
+  {
+   "month": "2026-04",
+   "net_worth": 1105618.8,
+   "assets": 4850364.25,
+   "liabilities": 4128258.12
+  },
+  {
+   "month": "2026-05",
+   "net_worth": 1126038.38,
+   "assets": 4896952.6,
+   "liabilities": 4104486.96
+  },
+  {
+   "month": "2026-06",
+   "net_worth": 1135144.12,
+   "assets": 4943540.94,
+   "liabilities": 4080715.8
+  },
+  {
+   "month": "2026-07",
+   "net_worth": 1155793.19,
+   "assets": 4990129.28,
+   "liabilities": 4056944.64
+  },
+  {
+   "month": "2026-08",
+   "net_worth": 1173527.34,
+   "assets": 5036717.63,
+   "liabilities": 4033173.48
+  },
+  {
+   "month": "2026-09",
+   "net_worth": 1190558.3,
+   "assets": 5083305.97,
+   "liabilities": 4009402.32
+  },
+  {
+   "month": "2026-10",
+   "net_worth": 1196487.08,
+   "assets": 5129894.32,
+   "liabilities": 3985631.16
+  },
+  {
+   "month": "2026-11",
+   "net_worth": 1214622.66,
+   "assets": 5176482.66,
+   "liabilities": 3961860.0
+  }
+ ]
+}

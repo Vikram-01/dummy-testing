@@ -1,0 +1,23 @@
+# dependencies & build output
+node_modules/
+mobile/android/
+mobile/ios/
+mobile/dist*/
+mobile/.expo/
+mobile/scripts/engine-test/.out.cjs
+*.apk
+*.aab
+__pycache__/
+.pytest_cache/
+.venv/
+
+# secrets — never commit
+*.jks
+*.keystore
+!debug.keystore
+credentials.json
+.env
+.env.*
+!.env.example
+*.p12
+*.pem
