@@ -66,8 +66,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
           usesCleartextTraffic: false,
           enableMinifyInReleaseBuilds: !isDebug,
           enableShrinkResourcesInReleaseBuilds: !isDebug,
-          // 64-bit only. x86_64 is kept so the APK also runs on Android emulators.
-          buildArchs: ['arm64-v8a', 'x86_64'],
+          // 64-bit ARM (all modern phones) + 32-bit ARM (budget / Android Go phones that run a 32-bit OS)
+          // + x86_64 (emulators). Without armeabi-v7a, 32-bit phones say "You can't install the app on your device".
+          buildArchs: ['arm64-v8a', 'armeabi-v7a', 'x86_64'],
         },
       },
     ],
